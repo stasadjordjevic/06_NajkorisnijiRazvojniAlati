@@ -8,7 +8,9 @@
 \usepackage{graphicx}
 \usepackage[english,serbian]{babel}
 \usepackage[unicode]{hyperref}
-\hypersetup{colorlinks,citecolor=blue,filecolor=green,linkcolor=blue,urlcolor=blue} 
+\hypersetup{colorlinks,citecolor=blue,filecolor=green,linkcolor=blue,urlcolor=blue}
+\usepackage{float} 
+\usepackage{placeins}
 \title{Najkorisniji razvojni alati \\
 \normalsize Seminarski rad u okviru kursa\\ Metodologija stručnog i naučnog rada
 \\Matematički fakultet}
@@ -102,6 +104,226 @@ Svi odgovori su bili anonimni, a učestvovanje u anketi dobrovoljno.
 
 
 \section{Rezultati}
+
+
+U ovom poglavlju izloženi su podaci prikupljeni sprovedenom anketom, koji daju uvid u najkorisnije razvojne alate. Uzorak obuhvata ispitanike različitih nivoa stručnosti od studenata do zaposlenih u IT industriji što omogućava analizu tržišta iz više perspektiva.
+
+Prikazani rezultati su podeljeni u nekoliko logičkih celina:
+\begin{itemize}
+    \item Ocene važnosti ključnih funkcionalnosti (brzina, UX, AI asistenti) u zavisnosti od kategorije alata.
+    \item Statistički podaci o korišćenju razvojnih okruženja (IDE) s obzirom na pol i radni status ispitanika.
+    \item Odnos između godina radnog iskustva i spremnosti na promenu primarnog alata.
+    \item Specifičnosti u zahtevima studenata sa MATF-a, FON-a i RAF-a.
+\end{itemize}
+
+Svi grafikoni su generisani na osnovu odgovora ispitanika, a prateća analiza se fokusira na uočene trendove i korelacije u dobijenim podacima.
+
+\subsection{Analiza faktora važnosti pri izboru alata}
+
+U ovom delu rada fokusiramo se na kriterijume koji programeri smatraju presudnim prilikom odabira radnog okruženja. Na slici \ref{fig:bitni_faktori} prikazani su rezultati za 11 različitih kategorija alata.
+
+\begin{figure}[H] % [H] fiksira sliku tačno ovde
+    \centering
+    \includegraphics[width=1\textwidth]{slike file/koji_faktori_su_najbitniji_kirosnicima_razlicitih_alata.png}
+    \caption{Važnost faktora prilikom izbora razvojnog alata}
+    \label{fig:bitni_faktori}
+\end{figure}
+
+Za svaki od 11 analiziranih razvojnih alata izračunata je prosečna ocena kvaliteta $\bar{X}_{A}$, koja predstavlja aritmetičku sredinu šest ključnih kriterijuma (brzina, jednostavnost, univerzalnost, dostupnost dodataka, vizuelni izgled i AI trendovi). Formula po kojoj je vršeno računanje za svaki alat $A$ je:
+
+\begin{equation}
+\bar{X}_{A} = \frac{f_{brzina} + f_{jednost} + f_{univ} + f_{plugin} + f_{visual} + f_{AI}}{6}
+\end{equation}
+
+Na osnovu ove metrike, možemo preciznije rangirati alate prema ukupnom zadovoljstvu korisnika:
+
+\begin{itemize}
+    \item \textbf{Cursor:} $\bar{X} \approx 4.41$ — Najviše rangiran alat, prvenstveno zbog maksimalnih ocena u kategorijama brzine i praćenja AI trendova.
+    \item \textbf{CLion i IntelliJ:} $\bar{X} \approx 3.85$ — Ovi alati zadržavaju visok prosek zbog ujednačenih ocena u svim kategorijama, uprkos nižem rezultatu za AI trendove.
+    \item \textbf{VS Code:} $\bar{X} \approx 3.78$ — Balansiran alat sa visokim ocenama za dostupnost dodataka i brzinu.
+    \item \textbf{PyCharm:} $\bar{X} \approx 4.00$ — Visok prosek zahvaljujući ujednačenosti svih faktora, gde nijedna ocena ne pada ispod 3.
+    \item \textbf{NeoVim i Vim:} $\bar{X} \approx 3.42$ — Specifični alati koji imaju ekstremno visoke ocene za brzinu, ali niži prosek zbog vizuelnog izgleda i AI integracija.
+    \item \textbf{Visual Studio:} $\bar{X} \approx 3.41$ — Solidan prosek koji održava univerzalnost i brzina, dok su AI trendovi slabije ocenjeni.
+\end{itemize}
+
+Ovakvo računanje pokazuje da moderni alati poput \textit{Cursor-a} trenutno nude najkompletniji paket funkcionalnosti, dok tradicionalni editori (Vim, NeoVim) ostaju specijalizovani alati sa visokim performansama, ali užim fokusom na moderne vizuelne i AI standarde.
+
+
+\subsection{Analiza korišćenja razvojnih okruženja u odnosu na pol}
+
+Ova podsekcija analizira distribuciju najpopularnijih razvojnih alata (IDE) među muškim i ženskim ispitanicima. Podaci su prikupljeni kako bi se utvrdilo da li postoji značajna korelacija između pola i izbora softvera za programiranje.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{slike file/koriscenje_razvojnih_alata_ide_prema_polu.png}
+    \caption{Korišćenje IDE alata u zavisnosti od pola ispitanika}
+    \label{fig:ide_pol}
+\end{figure}
+
+Na osnovu podataka prikazanih na slici \ref{fig:ide_pol}, uočavamo odnos  razvojnih alata u odnosu na pol ispitanika:
+
+\begin{itemize}
+    \item \textbf{Dominantni alati:} \textit{Visual Studio} i \textit{VS Code} su najzastupljeniji alati u uzorku. Interesantno je da oba rešenja imaju identičnu strukturu korisnika, po 21 muški i 15 ženskih ispitanika, što ukazuje na njihovu široku prihvaćenost bez obzira na pol.
+    \item \textbf{Uravnotežena zastupljenost:} Alat \textit{IntelliJ IDEA} izdvaja se po potpunoj ravnopravnosti, sa tačno 10 muških i 10 ženskih korisnika, što ga čini statistički najneutralnijim alatom u pogledu preferencija polova.
+    \item \textbf{Specifične razlike:} 
+    \begin{itemize}
+        \item Alati poput \textit{CLion}-a i \textit{PyCharm}-a pokazuju veću zastupljenost kod ženskih ispitanika u odnosu na njihov ukupan broj korisnika.
+        \item S druge strane, rešenja kao što su \textit{Cursor} i \textit{Eclipse} u ovom istraživanju su koristili isključivo muški ispitanici.
+    \end{itemize}
+\end{itemize}
+
+Ovi rezultati sugerišu da su industrijski standardi, poput Microsoft-ove porodice alata, univerzalno prihvaćeni u celoj zajednici. Razlike u preferencijama postaju uočljivije kod alata koji su usko specijalizovani za određene programske jezike ili kod novijih rešenja baziranih na veštačkoj inteligenciji.
+
+
+\subsection{Analiza preferencija Git platformi kod korisnika IntelliJ IDEA okruženja}
+
+U okviru istraživanja, specifičan fokus je stavljen na korisnike koji kao svoje primarno ili često razvojno okruženje koriste \textit{IntelliJ IDEA}. Cilj je bio utvrditi da li izbor profesionalnog IDE alata korelira sa izborom platforme za upravljanje verzijama koda (Git). Rezultati su prikazani na slici \ref{fig:git_intellij}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{slike file/github_vs_gitlab_korisnici_intellij.png}
+    \caption{Odnos GitHub i GitLab korisnika među korisnicima IntelliJ IDEA okruženja}
+    \label{fig:git_intellij}
+\end{figure}
+
+Na osnovu vizuelnog prikaza sa slike \ref{fig:git_intellij}, uočavaju se jasni trendovi u izboru platformi za kontrolu verzija među korisnicima \textit{IntelliJ IDEA} okruženja:
+
+\begin{itemize}
+    \item \textbf{Dominacija GitHub platforme:} Velika većina ispitanika, tačnije 80\%, opredelila se za \textit{GitHub}. Ovako visok procenat potvrđuje da je GitHub primarni standard u zajednici, verovatno zbog njegove široke zastupljenosti u open-source projektima i industriji.
+    \item \textbf{Zastupljenost GitLab-a:} Preostalih 20\% korisnika koristi \textit{GitLab}. Iako je ovaj udeo značajno manji, on ukazuje na prisustvo dela zajednice koji se fokusira na specifične \textit{DevOps} funkcionalnosti ili rad u okviru privatnih repozitorijuma koje GitLab tradicionalno podržava.
+    \item \textbf{Zaključak o homogenosti uzorka:} Dobijeni rezultati pokazuju da je grupa korisnika \textit{IntelliJ} alata prilično ujednačena u pogledu korišćenja pratećih alata, sa izrazitom preferencijom ka globalnom standardu koji predstavlja \textit{GitHub}.
+\end{itemize}
+
+
+\subsection{Analiza uticaja radnog iskustva na promenu razvojnog alata}
+
+U ovom delu istraživanja analizira se korelacija između dužine radnog staža ispitanika i njihove tendencije ka promeni primarnog razvojnog alata. Rezultati prikazani na slici \ref{fig:iskustvo_promena} pružaju uvid u to koliko su programeri u različitim fazama karijere skloni usvajanju novih tehnologija.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{slike file/odnos_promene_razvojnog_alata_i_radnog_iskustva.png}
+    \caption{Uticaj radnog iskustva na promenu razvojnog alata}
+    \label{fig:iskustvo_promena}
+\end{figure}
+
+Na osnovu podataka prikazanih na slici \ref{fig:iskustvo_promena}, analizirana je spremnost ispitanika da promene svoj primarni razvojni alat u zavisnosti od godina radnog iskustva. Rezultati ukazuju na sledeće trendove:
+
+\begin{itemize}
+    \item \textbf{Iskusni programeri (10--15 godina):} Ova grupa pokazuje izuzetno visoku stopu promene alata. Od ukupno 6 ispitanika, čak 5 je prešlo na novo okruženje, što sugeriše da iskusniji kadar ne okleva da usvoji modernija rešenja ukoliko ona nude veću efikasnost u radu.
+    \item \textbf{Grupa sa 6--9 godina iskustva:} Kod ovih ispitanika je takođe uočen visok stepen prilagođavanja, gde je 9 od 14 programera promenilo svoj primarni alat.
+    \item \textbf{Srednji nivo iskustva (3--5 godina):} Ovo je najbrojnija grupa u uzorku, u kojoj je uočljiva najveća podeljenost u navikama. Od 22 ispitanika, 10 je promenilo alat, dok je 12 ostalo pri svom prvobitnom izboru.
+    \item \textbf{Početnici (manje od 1 godine):} Iako je uzorak u ovoj kategoriji minimalan, zabeleženo je da se promena alata dešava čak i u najranijoj fazi karijere.
+\end{itemize}
+
+Ukupni podaci ukazuju na to da programeri sa više radnog staža (preko 6 godina) zapravo češće menjaju alate nego što se to možda intuitivno očekuje. Razlog za ovo verovatno leži u evoluciji projekata na kojima rade, kao i u pojavi naprednijih alata baziranih na novim tehnologijama poput veštačke inteligencije.
+
+
+\subsection{Analiza važnosti faktora kod korisnika tekstualnih editora}
+
+Pored kompleksnih integrisanih razvojnih okruženja (IDE), značajan deo ispitanika oslanja se na tekstualne editore. Na slici \ref{fig:tekst_editori} prikazano je kako korisnici različitih editora ocenjuju ključne faktore prilikom izbora svog primarnog alata.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{slike file/vaznost_faktora_u_odnosu_na_tekstualne_editore.png}
+    \caption{Važnost faktora u odnosu na najčešće korišćene tekstualne editore}
+    \label{fig:tekst_editori}
+\end{figure}
+
+Na osnovu prikupljenih odgovora, za svaki od analiziranih tekstualnih editora izračunata je prosečna ocena zadovoljstva korisnika. Ova vrednost predstavlja aritmetičku sredinu šest ključnih kriterijuma (brzina, jednostavnost, univerzalnost, dodaci, vizuelni izgled i AI trendovi), a računa se po formuli:
+
+\begin{equation}
+\bar{X}_{E} = \frac{f_{brzina} + f_{jednost} + f_{univ} + f_{plugin} + f_{visual} + f_{AI}}{6}
+\end{equation}
+
+Analiza podataka sa slike \ref{fig:tekst_editori} ukazuje na sledeće prosečne ocene po alatima:
+
+\begin{itemize}
+    \item \textbf{Typora:} $\bar{X} \approx 4.83$ — Alat sa najvišim prosekom, gde su skoro svi faktori, uključujući i AI trendove, ocenjeni maksimalnim ocenama.
+    \item \textbf{NeoVim i Vim:} $\bar{X} \approx 3.65$ — Ovi editori beleže ekstremno visoke ocene za brzinu i dostupnost dodataka, ali ukupni prosek vuku naniže nešto slabije ocene za vizuelni izgled i AI integracije.
+    \item \textbf{Sublime Text:} $\bar{X} \approx 3.75$ — Karakteriše ga visok stepen ujednačenosti, sa posebnim naglaskom na brzinu i jednostavnost korišćenja.
+    \item \textbf{Notepad++:} $\bar{X} \approx 3.73$ — Korisnici ovog alata najviše vrednuju univerzalnost i jednostavnost, dok su AI trendovi očekivano slabije ocenjeni.
+    \item \textbf{Kate:} $\bar{X} \approx 3.63$ — Solidan prosek koji održavaju stabilne ocene za brzinu i univerzalnost formata.
+    \item \textbf{Micro i TextEdit:} $\bar{X} \approx 3.50$ — Ovi editori se percipiraju kao jednostavna i brza rešenja, ali bez značajnog fokusa na proširivost ili moderan UX.
+\end{itemize}
+
+Ova analiza potvrđuje da korisnici tekstualnih editora prioritet daju performansama i brzini rada. Iako su modernija rešenja poput \textit{Typora-e} visoko ocenjena u svim kategorijama, tradicionalna zajednica (Vim, Notepad++) ostaje verna alatima koji nude stabilnost i efikasnost, čak i uz svesno žrtvovanje vizuelnog ugođaja ili najnovijih tehnoloških dodataka.
+
+
+\subsection{Uporedna analiza prioriteta: MATF, FON i RAF}
+
+Poseban segment istraživanja posvećen je analizi prioriteta ispitanika u zavisnosti od fakulteta na kojem studiraju ili su diplomirali. Na slikama \ref{fig:matf_prioriteti}, \ref{fig:fon_prioriteti} i \ref{fig:raf_prioriteti} prikazani su rezultati za Matematički fakultet (MATF), Fakultet organizacionih nauka (FON) i Računarski fakultet (RAF).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{slike file/matf_sta_mu_najbitnije.png}
+    \caption{Prioriteti ispitanika sa Matematičkog fakulteta}
+    \label{fig:matf_prioriteti}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{slike file/fon_sta_mu_najbitnije.png}
+    \caption{Prioriteti ispitanika sa Fakulteta organizacionih nauka}
+    \label{fig:fon_prioriteti}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{slike file/raf_sta_mu_najbitnije.png}
+    \caption{Prioriteti ispitanika sa Računarskog fakulteta}
+    \label{fig:raf_prioriteti}
+\end{figure}
+
+Komparativnom analizom prosečnih ocena važnosti $ \bar{X} $ za ove tri grupe, mogu se uočiti sledeći trendovi:
+
+\begin{itemize}
+    \item \textbf{Zajednički konsenzus o performansama:} Kod svih grupa, \textit{Brzina i odziv} je najviše rangiran faktor sa ocenama iznad $4.5$. Ovo potvrđuje univerzalnu potrebu programera za alatima koji ne usporavaju proces pisanja koda.
+    \item \textbf{Razlike u pragmatičnosti (Jednostavnost vs. Univerzalnost):} 
+    \begin{itemize}
+        \item Ispitanici sa \textbf{MATF-a} (na bazi 32 ispitanika) visoko vrednuju \textit{Jednostavnost korišćenja} ($\approx 4.12$), stavljajući je ispred univerzalnosti alata.
+        \item Ispitanici sa \textbf{RAF-a} daju podjednako visok značaj \textit{Univerzalnosti} i \textit{Brzini} (obe $\approx 4.67$), što može ukazivati na rad u različitim tehnologijama.
+        \item Ispitanici sa \textbf{FON-a} najviše vrednuju \textit{Dostupnost plugin-ova} ($\approx 4.0$) odmah nakon brzine, što sugeriše sklonost ka prilagođavanju okruženja specifičnim potrebama.
+    \end{itemize}
+    \item \textbf{Odnos prema AI trendovima:} Uočen je zanimljiv trend najnižih ocena za faktor \textit{Praćenje AI trendova}. Dok je na MATF-u taj prosek oko $2.44$, na RAF-u pada na samo $1.67$, a na FON-u je nešto viši ($\approx 2.67$). Ovi podaci sugerišu da je akademska zajednica i dalje primarno fokusirana na stabilnost i jezgro funkcionalnosti alata u odnosu na trenutne AI inovacije.
+    \item \textbf{Vizuelni izgled:} Najmanju važnost estetskom izgledu pridaju ispitanici sa FON-a ($\approx 3.33$), dok je na MATF-u i RAF-u taj prosek nešto viši ($\approx 3.67 - 3.75$).
+\end{itemize}
+
+Iako su uzorci za FON i RAF znatno manji u odnosu na MATF, poređenje ukazuje na specifične nijanse u profilisanju studenata: dok MATF teži balansu jednostavnosti i performansi, RAF naglašava univerzalnost, a FON fleksibilnost kroz ekstenzije.
+
+\subsection{Uporedna analiza prioriteta: Studenti nasuprot zaposlenih}
+
+Finalni segment analize fokusira se na razlike u prioritetima između studenata (22 ispitanika) i zaposlenih u IT sektoru (21 ispitanik). Poređenje rezultata prikazanih na slikama \ref{fig:studenti_bitno} i \ref{fig:zaposleni_bitno} omogućava uvid u evoluciju potreba programera tokom karijere.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{slike file/studenti_sta_im_najbitnije.png}
+    \caption{Faktori koji su najbitniji studentima}
+    \label{fig:studenti_bitno}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{slike file/zaposleni_sta_mu_najbitnije.png}
+    \caption{Faktori koji su najbitniji zaposlenima u IT sektoru}
+    \label{fig:zaposleni_bitno}
+\end{figure}
+
+Na osnovu uporednog pregleda srednjih ocena važnosti $ \bar{X} $, uočavaju se sledeće ključne razlike:
+
+\begin{itemize}
+    \item \textbf{Neprikosnovenost performansi:} Obe grupe su \textit{Brzinu i odziv} ocenile gotovo identično visokom ocenom ($\approx 4.67$), što potvrđuje da je efikasnost alata apsolutni prioritet bez obzira na profesionalni status.
+    \item \textbf{Jednostavnost vs. Profesionalni UX:} 
+    \begin{itemize}
+        \item \textbf{Studenti} daju znatno viši značaj \textit{Jednostavnosti korišćenja} ($\approx 4.14$), što je logično s obzirom na proces učenja i potrebu za brzim savladavanjem alata.
+        \item \textbf{Zaposleni} pokazuju blagi pad važnosti jednostavnosti ($\approx 3.95$), ali zato daju veću važnost faktoru \textit{Vizuelni izgled / UX} ($\approx 3.90$ naspram studentskih $3.55$), što ukazuje na to da profesionalci koji provode više vremena u alatima više vrednuju ergonomiju i dizajn interfejsa.
+    \end{itemize}
+    \item \textbf{Ekstenzibilnost i univerzalnost:} Zaposleni pokazuju veću ujednačenost u vrednovanju univerzalnosti i dostupnosti plugin-ova, dok studenti daju blagu prednost univerzalnosti alata.
+    \item \textbf{Odnos prema AI inovacijama:} Interesantno je da \textbf{zaposleni} daju veću ocenu \textit{Praćenju AI trendova} ($\approx 2.57$) u odnosu na \textbf{studente} ($\approx 2.32$). Ovo sugeriše da profesionalni sektor brže prepoznaje praktičnu vrednost AI asistenata u produkcionom kodu.
+\end{itemize}
+
+Zaključno, dok su osnovni zahtevi za brzinom isti, prelazak u profesionalnu sferu donosi veći fokus na korisničko iskustvo (UX) i AI integracije, dok važnost puke jednostavnosti korišćenja blago opada u korist naprednijih funkcionalnosti.
+
+\FloatBarrier
 
 \section{Diskusija}
 
