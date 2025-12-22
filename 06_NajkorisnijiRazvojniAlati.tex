@@ -33,7 +33,7 @@ Razvojni alati predstavljaju jedan od najznačajnijih faktora koji utiču na pro
 
 Predmet ovog rada jeste analiza upotrebe razvojnih alata, sa fokusom na integrisana razvojna okruženja (IDE), tekstualne editore koda i sisteme za verzionisanje, kao tri osnovne kategorije alata koje se najčešće koriste u procesu razvoja softvera. Cilj rada jeste da se ispita koje konkretne alate iz navedenih kategorija studenti i iskusniji programeri najčešće koriste, koje faktore smatraju najvažnijim prilikom njihovog izbora, kao i šta ih motiviše da pređu na novi alat ili ostanu pri postojećem. Pored toga, poseban akcenat stavljen je na ulogu navike u korišćenju određenog alata, kao i na zadovoljstvo korisnika alatima koje trenutno koriste, u cilju identifikovanja potencijalnih unapređenja samih alata.
 
-Istraživanje je sprovedeno putem onlajn ankete, pri čemu su prikupljeni kvantitativni i kvalitativni podaci o navikama, stavovima i iskustvima ispitanika u vezi sa pomenutim razvojnim alatima. Značaj ovog istraživanja ogleda se u pružanju sistematičnog uvida u način na koji korisnici percipiraju i biraju razvojne alate, kao i u boljem razumevanju faktora koji utiču na donošenje odluka u procesu izbora alata u realnom akademskom i profesionalnom kontekstu.
+Značaj ovog istraživanja ogleda se u pružanju sistematičnog uvida u način na koji korisnici percipiraju i biraju razvojne alate, kao i u boljem razumevanju faktora koji utiču na donošenje odluka u procesu izbora alata u realnom akademskom i profesionalnom kontekstu.
 
 \section{O razvojnim alatima}
 
@@ -63,12 +63,9 @@ Sistem za verzionisanje je sistem koji je zadužen za čuvanje i kontrolisanje i
 
 Upotrebom sistema za verzionisanje, programeri mogu paralelno raditi na različitim delovima projekta, uz kasnije objedinjavanje izmena. Ovi sistemi značajno smanjuju rizik od gubitka podataka i doprinose boljoj timskoj organizaciji.
 
-Sistemi za verzionisanje mogu se podeliti na centralizovane i distribuirane, u zavisnosti od načina na koji se čuva i deli istorija izmena. Centralizovani sistemi za verzionisanje podrazumevaju postojanje centralnog repozitorijuma na kojem se čuva kompletna istorija projekta, dok korisnici pristupaju tom repozitorijumu radi preuzimanja i slanja izmena. Ovakav pristup olakšava centralnu kontrolu, ali može predstavljati problem u slučaju nedostupnosti centralnog servera.
-
-Nasuprot tome, distribuirani sistemi za verzionisanje omogućavaju svakom korisniku da poseduje potpunu lokalnu kopiju repozitorijuma. Ovakav model omogućava rad bez stalne konekcije sa centralnim serverom, veću fleksibilnost i pouzdanost, kao i efikasniji paralelni razvoj. Zbog ovih karakteristika, distribuirani sistemi za verzionisanje danas su dominantni u savremenom razvoju softvera.
+Sistemi za verzionisanje mogu se podeliti na centralizovane, koji se oslanjaju na centralni repozitorijum sa kompletnom istorijom izmena, i distribuirane, kod kojih svaki korisnik poseduje lokalnu kopiju repozitorijuma.
 
 Najpoznatiji primer distribuiranog sistema za verzionisanje je Git.
-
 
 \section{Metodologija}
 
@@ -267,6 +264,22 @@ Na osnovu podataka prikazanih na slici \ref{fig:iskustvo_promena}, analizirana j
 
 Ukupni podaci ukazuju na to da programeri sa više radnog staža (preko 6 godina) zapravo češće menjaju alate nego što se to možda intuitivno očekuje. Razlog za ovo verovatno leži u evoluciji projekata na kojima rade, kao i u pojavi naprednijih alata baziranih na novim tehnologijama poput veštačke inteligencije.
 
+\subsection{Analiza uticaja navike na promenu razvojnog alata}
+
+Jedan od ciljeva istraživanja bio je ispitivanje uloge navike u procesu donošenja odluke o promeni glavnog razvojnog alata. U tom kontekstu analizirana je povezanost između ocene značaja navike odgovora ispitanika na pitanje da li su u prethodnom periodu menjali svoj primarni razvojni alat.
+
+Na slici \ref{fig:navika_promena} prikazan je odnos prosečne ocene značaja navike između ispitanika koji su menjali glavni razvojni alat i onih koji su ostali pri postojećem alatu.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Slike/navika_promena_alata.png}
+    \caption{Uticaj navike na promenu razvojnog alata}
+    \label{fig:navika_promena}
+\end{figure}
+
+Rezultati pokazuju da obe grupe ispitanika naviku ocenjuju kao važan faktor u izboru razvojnog alata. Iako je početna pretpostavka bila da će ispitanici kojima navika ima manji značaj biti skloniji promeni alata, uočava se da i ispitanici koji su menjali alat daju relativno visoke ocene uticaju navike. Razlika između prosečnih vrednosti ove dve grupe je prisutna, ali nije izražena, što ukazuje na to da navika ima snažan, ali ne i presudan uticaj na odluku o promeni razvojnog alata.
+
+Dobijeni rezultati sugerišu da promena razvojnog alata ne podrazumeva odsustvo navike, već pre spremnost korisnika da postojeće navike prevaziđu u situacijama kada novi alat nudi jasne funkcionalne prednosti ili bolje odgovara zahtevima konkretnog projekta.
 
 \subsection{Analiza važnosti faktora kod korisnika tekstualnih editora}
 
@@ -316,7 +329,19 @@ Na osnovu uporednog pregleda srednjih ocena važnosti ($\bar{X}$) sa slike \ref{
 \end{itemize}
 
 Može se zaključiti da, dok su bazični zahtevi za brzinom rada univerzalni, profesionalizacija donosi povećan fokus na korisničko iskustvo (UX) i AI integracije, dok važnost same jednostavnosti primene blago opada u korist naprednijih i bolje dizajniranih funkcionalnosti.
+\subsection{Analiza ograničenja razvojnih alata na osnovu otvorenih odgovora}
 
+U cilju dubljeg razumevanja uočenih problema u svakodnevnoj upotrebi razvojnih alata, analizirani su odgovori ispitanika na otvoreno pitanje koje se odnosilo na ograničenja i nedostatke alata koje najčešće koriste. Odgovori su povezani sa glavnim razvojnim alatom koji su ispitanici naveli i zatim analizirani primenom tematske analize.
+
+Kod korisnika alata Visual Studio Code najčešće su istaknuti problemi u vezi sa performansama i potrošnjom sistemskih resursa, kao i ograničenja u podršci za programski jezik C++. Ispitanici navode slabiju signalizaciju grešaka, nedovoljno pouzdane funkcije navigacije kroz kod, kao i tendenciju ka uvođenju funkcionalnosti koje ne doprinose direktno produktivnosti, ali povećavaju opterećenje sistema.
+
+Korisnici integrisanog razvojnog okruženja IntelliJ IDEA ističu suprotan problem, odnosno preveliki broj opcija i funkcionalnosti koje mogu otežati snalaženje i rad, naročito u slučajevima kada korisnicima nije potrebna kompletna paleta naprednih mogućnosti.
+
+Kod korisnika tekstualnih editora, posebno NeoVim-a, kao glavno ograničenje navodi se složenost konfiguracije i potreba za dodatnim znanjem, budući da se prilagođavanje i razvoj ekstenzija zasniva na programskom jeziku Lua. Iako ovaj pristup pruža visok stepen fleksibilnosti, on istovremeno predstavlja prepreku za širu upotrebu.
+
+Za alate poput Notepad++ uočena su ograničenja u domenu korisničkog interfejsa, koji se percipira kao zastareo u poređenju sa savremenim razvojnim okruženjima. Kod Jupyter okruženja ispitanici navode da ono nije dovoljno optimizovano za zahtevnije zadatke u oblasti analize podataka i mašinskog učenja, što ograničava njegovu primenu u kompleksnijim projektima.
+
+Na osnovu identifikovanih problema mogu se izdvojiti potencijalni pravci unapređenja, koji uključuju optimizaciju performansi, unapređenje signalizacije grešaka, pojednostavljenje korisničkog interfejsa kao i bolje prilagođavanje alata specifičnim oblastima primene.
 
 \section{Diskusija}
 U ovom radu su analizirani obrasci korišćenja razvojnih alata među studentima tehničkih fakulteta i profesionalcima u IT sektoru, sa posebnim fokusom na kriterijume izbora i spremnost na promenu alata. Dobijeni rezultati se u velikoj meri poklapaju sa literaturom, ali ukazuju i na određene specifičnosti konteksta.
