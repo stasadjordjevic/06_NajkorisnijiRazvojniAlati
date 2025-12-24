@@ -185,11 +185,11 @@ Na osnovu prikupljenih podataka, u tabeli \ref{tab:analiza_alata} sumirani su re
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 \hline
 \textbf{Alat} & \textbf{$n$} & $f_{jed}$ & $f_{brz}$ & $f_{AI}$ & $f_{plg}$ & $f_{vis}$ & $f_{uni}$ & $\bar{P_A}$ \\ \hline
-\textbf{VS Code}    & 14 & 4.4 & 4.7 & 2.6 & 4.1 & 3.9 & 3.9 & 4.10 \\ \hline
-\textbf{Git/GitHub} & 11 & 4.2 & 4.5 & 2.2 & 3.4 & 3.3 & 3.8 & 3.70 \\ \hline
-\textbf{IntelliJ}   & 4  & 3.5 & 4.5 & 2.3 & 4.0 & 3.8 & 4.5 & 3.75 \\ \hline
-\textbf{Cursor}     & 2  & 5.0 & 5.0 & 5.0 & 4.0 & 5.0 & 5.0 & 4.83 \\ \hline
-\textbf{NeoVim}     & 2  & 3.0 & 5.0 & 2.5 & 5.0 & 4.0 & 4.5 & 4.25 \\ \hline
+\textbf{VS Code}    & 14 & 4.4 & 4.7 & 2.6 & 4.1 & 3.9 & 3.9 & 16.35\\ \hline
+\textbf{Git/GitHub} & 11 & 4.2 & 4.5 & 2.2 & 3.4 & 3.3 & 3.8 & 7.13\\ \hline
+\textbf{IntelliJ}   & 4  & 3.5 & 4.5 & 2.3 & 4.0 & 3.8 & 4.5 & 2.73\\ \hline
+\textbf{Cursor}     & 2  & 5.0 & 5.0 & 5.0 & 4.0 & 5.0 & 5.0 & 1.75\\ \hline
+\textbf{NeoVim}     & 2  & 3.0 & 5.0 & 2.5 & 5.0 & 4.0 & 4.5 & 1.45\\ \hline
 \end{tabular}
 \end{table}
 Ovakav tabelarni prikaz jasno ukazuje na korelaciju između modernih zahteva (AI i brzina) i visokih ocena korisnika, dok VS Code zadržava primat u masovnosti primene.
@@ -200,7 +200,7 @@ Ova podsekcija analizira distribuciju najpopularnijih razvojnih alata (IDE) međ
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{Slike/koriscenje_razvojnih_alata_ide_prema_polu.png}
+    \includegraphics[width=0.95\textwidth]{Slike/koriscenje_razvojih_alata_spojeno.png}
     \caption{Korišćenje IDE alata u zavisnosti od pola ispitanika}
     \label{fig:ide_pol}
 \end{figure}
@@ -245,21 +245,29 @@ U ovom delu istraživanja analizira se korelacija između dužine radnog staža 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Slike/odnos_promene_razvojnog_alata_i_radnog_iskustva.png}
+    \includegraphics[width=0.85\textwidth]{Slike/odnos_promene_alata_i_radnog_iskustva.png}
     \caption{Uticaj radnog iskustva na promenu razvojnog alata}
     \label{fig:iskustvo_promena}
 \end{figure}
 
-Na osnovu podataka prikazanih na slici \ref{fig:iskustvo_promena}, analizirana je spremnost ispitanika da promene svoj primarni razvojni alat u zavisnosti od godina radnog iskustva. Rezultati ukazuju na sledeće trendove:
+\begin{figure}[h]
+    \centering
+    % Ovde ide tvoj grafikon koji smo generisali
+    \caption{Odnos promene razvojnog alata i radnog iskustva (grupisano)}
+    \label{fig:iskustvo_promena}
+\end{figure}
+
+Na osnovu podataka prikazanih na slici \ref{fig:iskustvo_promena}, analizirana je spremnost ispitanika da promene svoj primarni razvojni alat u zavisnosti od akumuliranog radnog iskustva. Kako bi se jasnije uočili trendovi, podaci su grupisani u tri ključne kategorije, a rezultati ukazuju na sledeće:
 
 \begin{itemize}
-    \item \textbf{Iskusni programeri (10--15 godina):} Ova grupa pokazuje izuzetno visoku stopu promene alata. Od ukupno 6 ispitanika, čak 5 je prešlo na novo okruženje, što sugeriše da iskusniji kadar ne okleva da usvoji modernija rešenja ukoliko ona nude veću efikasnost u radu.
-    \item \textbf{Grupa sa 6--9 godina iskustva:} Kod ovih ispitanika je takođe uočen visok stepen prilagođavanja, gde je 9 od 14 programera promenilo svoj primarni alat.
-    \item \textbf{Srednji nivo iskustva (3--5 godina):} Ovo je najbrojnija grupa u uzorku, u kojoj je uočljiva najveća podeljenost u navikama. Od 22 ispitanika, 10 je promenilo alat, dok je 12 ostalo pri svom prvobitnom izboru.
-    \item \textbf{Početnici (manje od 1 godine):} Iako je uzorak u ovoj kategoriji minimalan, zabeleženo je da se promena alata dešava čak i u najranijoj fazi karijere.
+    \item \textbf{Manje od 5 godina iskustva:} Ova objedinjena grupa (koja obuhvata početnike i programere sa 3--5 godina staža) predstavlja najbrojniji deo uzorka. Primećuje se umerena podeljenost u navikama: od ukupno 23 ispitanika, 11 je promenilo alat, dok je 12 ostalo pri prvobitnom izboru. Ovo sugeriše da se u ranoj fazi karijere navike tek formiraju.
+    
+    \item \textbf{Srednji nivo (6--9 godina iskustva):} Kod ovih ispitanika uočen je visok stepen prilagođavanja trendovima. Većina programera u ovoj grupi (9 od ukupno 14) odlučila se za promenu primarnog alata, što ukazuje na svest o potrebi za modernizacijom radnog procesa u zrelijoj fazi karijere.
+    
+    \item \textbf{Iskusni kadar (10+ godina iskustva):} Grupa sa najdužim stažom pokazuje najveću proaktivnost. Od 6 ispitanika, čak 5 je prešlo na novo okruženje. Ovakav rezultat opovrgava stereotip o rigidnosti iskusnijih programera i potvrđuje da veterani industrije najbrže prepoznaju i usvajaju alate koji donose konkretnu uštedu vremena ili napredne funkcije.
 \end{itemize}
 
-Ukupni podaci ukazuju na to da programeri sa više radnog staža (preko 6 godina) zapravo češće menjaju alate nego što se to možda intuitivno očekuje. Razlog za ovo verovatno leži u evoluciji projekata na kojima rade, kao i u pojavi naprednijih alata baziranih na novim tehnologijama poput veštačke inteligencije.
+Ukupni podaci sugerišu da akumulacija radnog staža (posebno preko 6 godina) korelira sa većom verovatnoćom promene alata. Razlog za ovakav trend verovatno leži u kompleksnosti projekata koji zahtevaju naprednije ekosisteme, kao i u integraciji novih tehnologija poput veštačke inteligencije u modernim razvojnim okruženjima.
 
 \subsection{Analiza uticaja navike na promenu razvojnog alata}
 
@@ -307,7 +315,7 @@ Finalni segment analize fokusira se na razlike u prioritetima između studenata 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Slike/sta_je_najbitnije_grupi_spojene.png}
+    \includegraphics[width=1\textwidth]{Slike/oredjenje_prioriteta_studenti_zaposleni.png}
     \caption{Uporedni prikaz važnosti faktora za grupe: STUDENTI i ZAPOSLENI}
     \label{fig:spojeni_prioriteti}
 \end{figure}
@@ -339,6 +347,21 @@ Kod korisnika tekstualnih editora, posebno NeoVim-a, kao glavno ograničenje nav
 Za alate poput Notepad++ uočena su ograničenja u domenu korisničkog interfejsa, koji se percipira kao zastareo u poređenju sa savremenim razvojnim okruženjima. Kod Jupyter okruženja ispitanici navode da ono nije dovoljno optimizovano za zahtevnije zadatke u oblasti analize podataka i mašinskog učenja, što ograničava njegovu primenu u kompleksnijim projektima.
 
 Na osnovu identifikovanih problema mogu se izdvojiti potencijalni pravci unapređenja, koji uključuju optimizaciju performansi, unapređenje signalizacije grešaka, pojednostavljenje korisničkog interfejsa kao i bolje prilagođavanje alata specifičnim oblastima primene.
+
+\subsection{Analiza otvorenih odgovora ispitanika}
+
+Pored kvantitativnih podataka, ispitanici su pružili detaljnije obrazloženje svojih preferencija kroz otvorena pitanja o razlozima izbora glavnog alata i problemima sa kojima se susreću. Analiza ovih odgovora otkriva nekoliko ključnih obrazaca:
+
+\begin{itemize}
+    \item \textbf{Razlozi za izbor alata:} Dominantan faktor kod korisnika \textit{Visual Studio Code}-a je balans između jednostavnosti i funkcionalnosti, pri čemu se često ističu intuitivnost i dobar korisnički doživljaj (UX). S druge strane, korisnici \textit{JetBrains} porodice (IntelliJ, PyCharm, CLion) primarno biraju ove alate zbog robusne podrške za specifične programske jezike poput Jave i Spring framework-a. Zanimljivo je da značajan broj ispitanika kao razlog navodi eksterne faktore poput zahteva fakulteta ili radnog mesta (,,nametnuo posao'', ,,moram zbog faksa''), dok napredni korisnici (npr. \textit{NeoVim}) fokus stavljaju na brzinu i efikasnost kroz eliminaciju upotrebe miša.
+    
+    \item \textbf{Problemi i ograničenja:} Kritike su jasno podeljene prema tipu alata. Kod kompleksnijih okruženja poput \textit{Visual Studio}-a i \textit{IntelliJ}-a, korisnici se najviše žale na veliku potrošnju memorije (RAM) i prisustvo ,,nepotrebnih opcija'' koje opterećuju rad. Nasuprot tome, korisnici lakših editora (VSC) uočavaju nedostatke u naprednim funkcijama, kao što su slabija signalizacija grešaka u poređenju sa punim IDE rešenjima, problemi sa C++ podrškom, ili povremeni otkaz funkcije ,,Go to Definition''. 
+    
+    \item \textbf{Uloga pomoćnih alata i AI:} Iako su pitanja bila usmerena na razvojna okruženja, veliki broj ispitanika je spontano izdvojio \textit{Git} kao svoj najkorišćeniji alat, definišući ga kao ,,apsolutno neophodan''. Takođe, primećuje se prodor novih alata poput \textit{Cursor}-a, gde korisnici ističu visoku produktivnost, ali i uočavaju rane probleme poput AI halucinacija.
+\end{itemize}
+
+Ovi odgovori potvrđuju da, iako je univerzalnost bitna, programeri visoko vrednuju specijalizaciju alata za konkretne zadatke i da su spremni da tolerišu hardversku zahtevnost ukoliko ona donosi značajnu uštedu u vremenu prilikom debagovanja i navigacije kroz kompleksne projekte.
+
 
 \section{Diskusija}
 U ovom radu su analizirani obrasci korišćenja razvojnih alata među studentima tehničkih fakulteta i profesionalcima u IT sektoru, sa posebnim fokusom na kriterijume izbora i spremnost na promenu alata. Dobijeni rezultati se u velikoj meri poklapaju sa literaturom, ali ukazuju i na određene specifičnosti konteksta.
