@@ -1,7 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage{color}
 \usepackage{url}
-\usepackage{graphicx}
 \usepackage{caption}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -12,7 +11,10 @@
 \hypersetup{colorlinks,citecolor=blue,filecolor=green,linkcolor=blue,urlcolor=blue}
 \usepackage{float} 
 \usepackage{placeins}
-
+\usepackage{xcolor}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
 
 \lstset{ 
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
@@ -265,13 +267,6 @@ U ovom delu istraživanja analizira se korelacija između dužine radnog staža 
     \label{fig:iskustvo_promena}
 \end{figure}
 
-\begin{figure}[h]
-    \centering
-    % Ovde ide tvoj grafikon koji smo generisali
-    \caption{Odnos promene razvojnog alata i radnog iskustva (grupisano)}
-    \label{fig:iskustvo_promena}
-\end{figure}
-
 Kako bi se jasnije uočili trendovi, podaci su grupisani u tri ključne kategorije, a rezultati ukazuju na sledeće:
 
 \begin{itemize}
@@ -298,7 +293,7 @@ Dobijeni rezultati sugerišu da promena razvojnog alata ne podrazumeva odsustvo 
 \subsection{Uporedna analiza prioriteta: Studenti nasuprot zaposlenih}
 \label{subsec:analiza5}
 
-Finalni segment analize fokusira se na razlike u prioritetima između studenata ($n=22$) i zaposlenih u IT sektoru ($n=21$). Poređenje rezultata na objedinjenom prikazu (slika \ref{fig:spojeni_prioriteti}) omogućava precizan uvid u evoluciju potreba programera tokom profesionalnog razvoja.
+Ova podsekcija razmatra razlike u prioritetima između studenata ($n=22$) i zaposlenih u IT sektoru ($n=21$). Uporedni prikaz srednjih ocena važnosti faktora dat je na slici \ref{fig:spojeni_prioriteti}.
 
 \begin{figure}[H]
     \centering
@@ -307,20 +302,7 @@ Finalni segment analize fokusira se na razlike u prioritetima između studenata 
     \label{fig:spojeni_prioriteti}
 \end{figure}
 
-Na osnovu uporednog pregleda srednjih ocena važnosti ($\bar{X}$) sa slike \ref{fig:spojeni_prioriteti}, uočavaju se sledeće ključne razlike:
-
-\begin{itemize}
-    \item \textbf{Neprikosnovenost performansi:} Obe grupe su \textit{Brzinu i odziv} ocenile kao najvažniji faktor. Zaposleni daju nijansu višu ocenu (4.68) u odnosu na studente (4.65), što potvrđuje da je efikasnost alata apsolutni prioritet bez obzira na profesionalni status.
-    \item \textbf{Jednostavnost nasuprot profesionalnom UX-u:} 
-    \begin{itemize}
-        \item \textbf{Studenti} daju značajno veći prioritet \textit{Jednostavnosti korišćenja} (4.15), što reflektuje potrebu za brzim savladavanjem alata tokom procesa učenja.
-        \item \textbf{Zaposleni} pokazuju blagi pad važnosti puke jednostavnosti (3.95), ali zato daju primetno veću važnost faktoru \textit{Vizuelni izgled / UX} (3.90 naspram studentskih 3.55). Ovo ukazuje na to da profesionalci, usled dugotrajnog svakodnevnog rada u alatima, više vrednuju ergonomiju i kvalitet dizajna interfejsa.
-    \end{itemize}
-    \item \textbf{Ekstenzibilnost i univerzalnost:} Kod zaposlenih je uočena potpuna ujednačenost u vrednovanju \textit{Univerzalnosti} i \textit{Dostupnosti plugin-ova} (obe ocene su 3.85), dok studenti daju blagu prednost univerzalnosti alata (4.10) u odnosu na ekstenzije (3.95).
-    \item \textbf{Odnos prema AI inovacijama:} Profesionalni sektor pokazuje veću otvorenost ka novim tehnologijama, pa \textbf{zaposleni} daju višu ocenu \textit{Praćenju AI trendova} (2.60) u odnosu na \textbf{studente} (2.35). Ovo sugeriše da iskusniji programeri brže prepoznaju upotrebnu vrednost AI asistenata u realnim produkcionim uslovima.
-\end{itemize}
-
-Može se zaključiti da, dok su bazični zahtevi za brzinom rada univerzalni, profesionalizacija donosi povećan fokus na korisničko iskustvo (UX) i AI integracije, dok važnost same jednostavnosti primene blago opada u korist naprednijih i bolje dizajniranih funkcionalnosti.
+Obe grupe ocenjuju \textit{brzinu i odziv} kao najvažniji faktor, sa gotovo identičnim prosečnim ocenama. Studenti pridaju veću važnost \textit{jednostavnosti korišćenja}, dok zaposleni više vrednuju \textit{vizuelni izgled i UX}. Zaposleni takođe pokazuju veću otvorenost ka \textit{praćenju AI trendova}, dok studenti daju blagu prednost \textit{univerzalnosti alata} u odnosu na dostupnost dodataka (plugin-ova).
 
 \subsection{Analiza otvorenih odgovora ispitanika}
 \label{subsec:analiza6}
@@ -363,19 +345,17 @@ U našoj anketi se jasno vidi znatna dominacija GitHub-a nad GitLab-om kao platf
 \subsection{Faktori koji utiču na izbor alata}
 \label{subsec:faktori}
 
-Pored same zastupljenosti pojedinih alata, rezultati istraživanja pružaju uvid u obrasce ponašanja i navike programera prilikom izbora i promene razvojnog okruženja. Analiza faktora izbora pokazuje da su \textit{brzina i odziv} alata dosledno ocenjeni kao najvažniji kriterijum, nezavisno od pola, radnog statusa ili nivoa iskustva ispitanika. Ovakav rezultat potvrđuje da programeri primarno vrednuju efikasnost i stabilnost, budući da razvojni alati predstavljaju centralni deo svakodnevnog rada.
+Rezultati istraživanja pokazuju da su \textit{brzina i odziv} razvojnog alata dominantni kriterijum izbora, nezavisno od pola, radnog statusa ili nivoa iskustva ispitanika. Ovo potvrđuje da programeri primarno vrednuju efikasnost i stabilnost, budući da alati predstavljaju centralni deo njihovog svakodnevnog rada.
 
 \setlength{\parskip}{0.5em}
 
-Takođe, analiza spremnosti na promenu razvojnog alata ukazuje da programeri sa većim radnim iskustvom češće menjaju svoje primarno okruženje. Ovo sugeriše da se sa razvojem karijere smanjuje vezanost za konkretan alat, dok raste fokus na prilagodljivost i efikasnost u različitim tehnološkim kontekstima. Nasuprot tome, manje iskusni programeri češće ostaju pri jednom alatu, što može biti posledica formiranja početnih navika i potrebe za stabilnim okruženjem tokom učenja.
+Analiza spremnosti na promenu alata ukazuje da ispitanici sa većim radnim iskustvom češće menjaju svoje primarno razvojno okruženje, što sugeriše veću fleksibilnost i manju vezanost za konkretne tehnologije. Nasuprot tome, manje iskusni programeri češće ostaju pri jednom alatu, verovatno usled formiranja početnih navika i potrebe za stabilnim okruženjem tokom učenja.
 
-Razlike su uočljive i u odnosu prema savremenim tehnologijama. Zaposleni programeri pokazuju veću otvorenost ka praćenju \textit{AI trendova} i korišćenju AI alata u razvoju softvera, što može biti posledica rada na realnim produkcionim projektima i potrebe za većom produktivnošću. Studenti, iako upoznati sa ovim tehnologijama, u manjoj meri ih doživljavaju kao važan faktor pri izboru razvojnog alata
-
+Razlike su uočene i u odnosu prema savremenim tehnologijama: zaposleni programeri pokazuju veću otvorenost ka praćenju \textit{AI trendova} i korišćenju AI alata, dok studenti ove faktore ređe percipiraju kao važne pri izboru razvojnog okruženja.
 
 Poseban značaj ima i uticaj dugogodišnjih navika na izbor razvojnog alata. Većina ispitanika je ocenila ovaj faktor veoma visoko — čak 62,8\% ispitanika dalo je ocenu 4, a dodatnih 23,3\% ocenu 5, dok zanemarljiv broj smatra da navike imaju mali ili nikakav uticaj. Ovakav rezultat ukazuje da se programeri često zadržavaju na alatima koje dobro poznaju, čak i kada postoje alternative sa sličnim ili naprednijim funkcionalnostima.
 
-
-U celini, rezultati istraživanja ukazuju da izbor razvojnog alata nije zasnovan isključivo na tehničkim karakteristikama, već predstavlja kombinaciju profesionalnih potreba, stečenih navika i konteksta u kojem programer radi ili se obrazuje.
+U celini, izbor razvojnog alata predstavlja rezultat kombinacije tehničkih zahteva, profesionalnog konteksta i stečenih navika, a ne isključivo procene pojedinačnih karakteristika alata.
 
 \subsection{Ograničenja istraživanja}
 \label{subsec:ogranicenja}
