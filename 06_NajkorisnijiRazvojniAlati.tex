@@ -168,7 +168,7 @@ U ovom poglavlju analizirani su podaci prikupljeni istraživanjem, uz poseban os
 \subsection{Kriterijumi pri izboru alata}
 \label{subsec:analiza1}
 
-Fokus ovog dela rada je na kriterijumima koje programeri smatraju presudnim prilikom odabira radnog okruženja. Na slici \ref{fig:bitni_faktori} prikazani su rezultati za pet najzastupljenijih alata.
+Fokus ovog dela rada je na kriterijumima koje programeri smatraju presudnim prilikom odabira radnog okruženja. Ispitivani su sledeći faktori: jednostavnost korišćenja, brzina i odziv okruženja, praćenje i integracija AI trendova, dostupnost dodataka i ekstenzija, vizuelni izgled i UX dizajn, kao i univerzalnost alata. Na slici \ref{fig:bitni_faktori} prikazani su rezultati za pet najzastupljenijih alata.
 
 \begin{figure}[H]
     \centering
@@ -180,7 +180,7 @@ Fokus ovog dela rada je na kriterijumima koje programeri smatraju presudnim pril
 Za preciznije rangiranje uveden je pokazatelj reprezentativnosti alata $P_{A}$, koji ponderiše prosečnu ocenu faktora sa udelom korisnika tog alata u ukupnom uzorku. Formula za izračunavanje glasi:
 
 \begin{equation}
-P_{A} = \left( \frac{f_{jednost} + f_{brzina} + f_{AI} + f_{plugin} + f_{visual} + f_{univ}}{6} \right) \cdot \frac{n_A}{N_{top5}}
+P_{A} = \left( \frac{f_{jed} + f_{brz} + f_{AI} + f_{plg} + f_{viz} + f_{uni}}{6} \right) \cdot \frac{n_A}{N_{top5}}
 \end{equation}
 
 Značenje parametara korišćenih u formuli detaljno je opisano u tabeli \ref{tab:parametri}.
@@ -192,12 +192,12 @@ Značenje parametara korišćenih u formuli detaljno je opisano u tabeli \ref{ta
 \begin{tabular}{ll}
 \hline
 \textbf{Parametar} & \textbf{Opis faktora / Vrednost} \\ \hline
-$f_{jednost}$ & Jednostavnost korišćenja \\
-$f_{brzina}$  & Brzina i odziv okruženja \\
+$f_{jed}$ & Jednostavnost korišćenja \\
+$f_{brz}$  & Brzina i odziv okruženja \\
 $f_{AI}$      & Praćenje i integracija AI trendova \\
-$f_{plugin}$  & Dostupnost dodataka i ekstenzija \\
-$f_{visual}$  & Vizuelni izgled i UX dizajn \\
-$f_{univ}$    & Univerzalnost alata \\
+$f_{plg}$  & Dostupnost dodataka i ekstenzija \\
+$f_{viz}$  & Vizuelni izgled i UX dizajn \\
+$f_{uni}$    & Univerzalnost alata \\
 $n_A$         & Broj korisnika koji koriste alat $A$ \\
 $N_{top5}$    & Broj korisnika nekih od top 5 alata ($N=33$) \\ \hline
 \end{tabular}
@@ -209,20 +209,24 @@ Na osnovu prikupljenih podataka, u tabeli \ref{tab:analiza_alata} sumirani su re
 \centering
 \caption{Analiza vodećih razvojnih alata na osnovu pojedinačnih faktora važnosti}
 \label{tab:analiza_alata}
-
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Alat} & \textbf{$n$} & $f_{jed}$ & $f_{brz}$ & $f_{AI}$ & $f_{plg}$ & $f_{vis}$ & $f_{uni}$ & $\bar{P_A}$ \\ \hline
-\textbf{VS Code}    & 14 & 4.4 & 4.7 & 2.6 & 4.1 & 3.9 & 3.9 & 1.67\\ \hline
-\textbf{Git/GitHub} & 11 & 4.2 & 4.5 & 2.2 & 3.4 & 3.3 & 3.8 & 1.19\\ \hline
-\textbf{IntelliJ}   & 4  & 3.5 & 4.5 & 2.3 & 4.0 & 3.8 & 4.5 & 0.46\\ \hline
-\textbf{Cursor}     & 2  & 5.0 & 5.0 & 5.0 & 4.0 & 5.0 & 5.0 & 0.29\\ \hline
-\textbf{NeoVim}     & 2  & 3.0 & 5.0 & 2.5 & 5.0 & 4.0 & 4.5 & 0.24\\ \hline
+\textbf{Alat} & \textbf{$n$} & $f_{jed}$ & $f_{brz}$ & $f_{AI}$ & $f_{plg}$ & $f_{viz}$ & $f_{uni}$ & $\bar{P_A}$ \\ \hline
+\textbf{VS Code}    & 14 & 4.4 & 4.7 & 2.6 & 4.1 & 3.9 & 3.9 & 1.67 \\ \hline
+\textbf{Git/GitHub} & 11 & 4.2 & 4.5 & 2.2 & 3.4 & 3.3 & 3.8 & 1.19 \\ \hline
+\textbf{IntelliJ}   & 4  & 3.5 & 4.5 & 2.3 & 4.0 & 3.8 & 4.5 & 0.46 \\ \hline
+\textbf{Cursor}     & 2  & 5.0 & 5.0 & 5.0 & 4.0 & 5.0 & 5.0 & 0.29 \\ \hline
+\textbf{NeoVim}     & 2  & 3.0 & 5.0 & 2.5 & 5.0 & 4.0 & 4.5 & 0.24 \\ \hline\hline
+\multicolumn{2}{|l|}{\textbf{Prosečna ocena faktora}} 
+& \textbf{4.02} & \textbf{4.74} & \textbf{2.92} & \textbf{4.10} & \textbf{4.00} & \textbf{4.34}
+& \multicolumn{1}{c|}{--} \\ \hline
 \end{tabular}
 \end{table}
-Ovakav tabelarni prikaz jasno ukazuje na korelaciju između modernih zahteva (AI i brzina) i visokih ocena korisnika, dok VS Code zadržava primat u masovnosti primene.
 
-U okviru ove analize odrađena je i analiza koja se vezuje isključivo za tekstualne editore koda. Na slici \ref{fig:tekst_editori} prikazano je kako korisnici pet najzastupljenijih editora ocenjuju ključne faktore prilikom izbora svog primarnog alata.
+Iz prikazanih rezultata uočava se da korisnici najviše vrednuju brzinu i odziv razvojnog okruženja, dok faktor integracije AI tehnologija ostvaruje najnižu prosečnu ocenu.
+
+U okviru ove analize odrađena je i analiza koja se vezuje isključivo za tekstualne editore koda. Na slici \ref{fig:tekst_editori} prikazano je kako korisnici pet najzastupljenijih editora ocenjuju ključne faktore prilikom izbora svog primarnog alata. Na osnovu prikupljenih odgovora, analizirane su prosečne vrednosti šest ključnih kriterijuma, pomenutih na početku ovog odeljka.
+
 
 \begin{figure}[H]
     \centering
@@ -230,16 +234,6 @@ U okviru ove analize odrađena je i analiza koja se vezuje isključivo za tekstu
     \caption{Važnost faktora izbora najčešće korišćenih tekstualnih editora}
     \label{fig:tekst_editori}
 \end{figure}
-
-Na osnovu prikupljenih odgovora, analizirane su prosečne vrednosti šest ključnih kriterijuma: brzina i odziv, jednostavnost korišćenja, univerzalnost, dostupnost dodataka, vizuelni izgled i AI trendovi. Podaci sa slike \ref{fig:tekst_editori} ukazuju na specifične prioritete unutar različitih korisničkih grupa:
-
-\begin{itemize}
-    \item \textbf{Notepad ($n=14$):} Najzastupljeniji editor u uzorku. Korisnici mu daju visoke ocene za brzinu i odziv, kao i za jednostavnost korišćenja, dok su AI trendovi očekivano najslabije ocenjen faktor.
-    \item \textbf{Vim ($n=12$):} Ovaj alat beleži izuzetno visoku ocenu za brzinu i odziv (blizu 5.0). Korisnici takođe visoko vrednuju dostupnost dodataka i vizuelni izgled/UX, što ukazuje na visok stepen personalizacije.
-    \item \textbf{Kate ($n=11$):} Karakteriše ga ujednačenost ocena, sa posebnim naglaskom na brzinu rada. Interesantno je da korisnici ovog editora daju stabilne ocene univerzalnosti alata.
-    \item \textbf{Notepad++ ($n=9$):} Kod ovog alata dominiraju ocene za brzinu, vizuelni izgled i univerzalnost, što ga pozicionira kao svestrano rešenje za brze izmene koda.
-    \item \textbf{Sublime Text ($n=4$):} Iako na manjem uzorku, ovaj editor zadržava visok nivo ocena za brzinu i jednostavnost, dokazujući svoju reputaciju jednog od najbržih modernih tekstualnih editora.
-\end{itemize}
 
 Ova analiza potvrđuje da korisnici tekstualnih editora apsolutni prioritet daju performansama i brzini rada. Iako su alati poput \textit{Vim-a} i \textit{Notepad++} ocenjeni stabilno u svim kategorijama, zajednička nit svim ispitanicima je niska važnost AI trendova u kontekstu čistih tekstualnih editora, gde se primat ostavlja stabilnosti i efikasnosti.
 \subsection{Opšte preferencije Git platformi}
