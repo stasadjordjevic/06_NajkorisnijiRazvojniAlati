@@ -1,0 +1,197 @@
+
+
+ % !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{report}
+
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8x,utf8]{inputenc} % make weird characters work
+\usepackage[serbian]{babel}
+%\usepackage[english,serbianc]{babel}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\odgovor}[1]{\textcolor{blue}{#1}}
+
+\begin{document}
+
+\title{Najkorisniji razvojni alati\\ \small{Staša Đorđević, Lazar Savić, Đurđa Milošević, Bogdan Tomić \\
+mi251007@alas.matf.bg.ac.rs, mi251004@alas.matf.bg.ac.rs, \\
+mi251008@alas.matf.bg.ac.rs, mi251040@alas.matf.bg.ac.rs}}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Uputstva}
+\emph{Prilikom predavanja odgovora na recenziju, obrišite ovo poglavlje.}
+
+Neophodno je odgovoriti na sve zamerke koje su navedene u okviru recenzija. Svaki odgovor pišete u okviru okruženja \verb"\odgovor", \odgovor{kako bi vaši odgovori bili lakše uočljivi.} 
+\begin{enumerate}
+
+\item Odgovor treba da sadrži na koji način ste izmenili rad da bi adresirali problem koji je recenzent naveo. Na primer, to može biti neka dodata rečenica ili dodat pasus. Ukoliko je u pitanju kraći tekst onda ga možete navesti direktno u ovom dokumentu, ukoliko je u pitanju duži tekst, onda navedete samo na kojoj strani i gde tačno se taj novi tekst nalazi. Ukoliko je izmenjeno ime nekog poglavlja, navedite na koji način je izmenjeno, i slično, u zavisnosti od izmena koje ste napravili. 
+
+\item Ukoliko ništa niste izmenili povodom neke zamerke, detaljno obrazložite zašto zahtev recenzenta nije uvažen.
+
+\item Ukoliko ste napravili i neke izmene koje recenzenti nisu tražili, njih navedite u poslednjem poglavlju tj u poglavlju Dodatne izmene.
+\end{enumerate}
+
+Za svakog recenzenta dodajte ocenu od 1 do 5 koja označava koliko vam je recenzija bila korisna, odnosno koliko vam je pomogla da unapredite rad. Ocena 1 označava da vam recenzija nije bila korisna, ocena 5 označava da vam je recenzija bila veoma korisna. 
+
+NAPOMENA: Recenzije ce biti ocenjene nezavisno od vaših ocena. Na osnovu recenzije ja znam da li je ona korisna ili ne, pa na taj način vama idu negativni poeni ukoliko kažete da je korisno nešto što nije korisno. Vašim kolegama šteti da kažete da im je recenzija korisna jer će misliti da su je dobro uradili, iako to zapravo nisu. Isto važi i na drugu stranu, tj nemojte reći da nije korisno ono što jeste korisno. Prema tome, trudite se da budete objektivni. 
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+\section{O čemu rad govori?}
+
+Ovaj rad je sproveo istraživanje o preferencijama i trendovima razvojnih alata kod studenata i uglavnom mladjih programera. U obzir su uzeta i ranija istraživanja i na osnovu njih je sprovedena anketa koja je pretežno potvrdila prošle zaključke. Akcenat je stavljen na kriterijume koji su bitni programerima i na trendove promena glavnih alata.
+
+\section{Krupne primedbe i sugestije}
+
+\begin{itemize}
+    \item \textbf{4.1 Analiza faktora važnosti pri izboru alata} - Zaključak analize važnosti rada kaže ''Ovakav tabelarni prikaz jasno ukazuje na korelaciju između modernih zahteva (AI i brzina) i visokih ocena korisnika'' i sa ovim se ne bih potpuno složila. Svakako, brzina i odziv su uvek glavni faktor, nebitno da li pričamo o tekstualnim editorima ili IDE, ali rekla bih da AI nema toliku korelaciju uopšte. U prilog mom razmišljanju možemo analizirati datu tabelu u kojoj, da, ljudi koriste Cursor uglavnom zbog AI trendova, ali i dalje se programira i u NeoVim-u iako njegovi korisnici ne stavljaju nimalo važnosti na AI. Kod ostalih alata takođe primećujemo druge stvari koje su korisnicima ipak bitnije od AI trendova.
+    \item \textbf{4.1 Analiza faktora važnosti pri izboru alata} - \\''\textbf{Kate (n = 11):} Karakteriše ga ujednačenost ocena, sa posebnim naglaskom na brzinu rada.'' Nema smisla da je ujednačeno sa naglaskom na nešto, takođe ne izgleda ujednačeno na osnovu slike.\\
+    ''Interesantno je da korisnici ovog editora daju stabilne ocene univerzalnosti alata.'' Ova rečenica nema nimalo smisla, nije mi jasno šta je njena poenta.
+\end{itemize}
+
+\section{Sitne primedbe}
+
+\begin{itemize}
+    \item \textbf{2 O razvojnim alatima} - rečenica ''Razvoj softvera podrazumeva upotrebu različitih alata''  je pomalo nejasna, kao da se razvoj softvera bavi time, a ne da upotreba alata potpomaže razvoju.
+    \item \textbf{3.1 Uzorkovanje} - ''ispitanici... i bili dostupni autorima istraživanja putem onlajn kanala'' - kako su bili dostupni ako je anonimno.
+    \item \textbf{3.2 Struktura uzorka} - šta podrazumeva ''dužina iskustva u programiranju''? Da li je tu uključen i period učenja?
+    \item \textbf{3.3 Struktura ankete} - ''preferencije izmedu GitHub i GitLab'' možda bolje zvuči kao ''izmedu GitHub-a i GitLab-a'' ili ''izmedu GitHub i GitLab platforme''
+    \item \textbf{4.1 Analiza faktora važnosti pri izboru alata} - čitalac ne zna šta je faktor važnosti u ovom trenutku, ili preimenovati odeljak ili objasniti u prvoj rečenici
+    \item \textbf{4.3 Analiza uticaja radnog iskustva na promenu razvojnog alata} - Na šta se odnosi promena alata u ovom odeljku? Dvosmisleno je. Pretpostavljam da se misli da li je osoba nekad u životu promenila glavni alat koji koristi, ali nisam sigurna iako sam popunjavala anketu.
+    \item \textbf{4.4 Analiza uticaja navike na promenu razvojnog alata} - ''U tom kontekstu analizirana je povezanost izmedu ocene značaja navike odgovora ispitanika pitanje da li su u prethodnom periodu menjali svoj primarni razvojni alat.'' Rečenica nije čitljiva. Obratiti pažnje na stil pisanja u celom odeljku.
+\end{itemize}
+
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Da. Odgovara na temu i anketa je sastavljena odgovarajuće.
+
+\item Da li je nešto važno propušteno?\\
+Ne, sve je spomenuto, sve je dobro objašnjeno tako da i neko ko nema puno iskustva sa temom može lako da čita i razume rad.
+
+\item Da li ima suštinskih grešaka i propusta?\\
+Ne, ovaj rad suštinski veoma dobro obrađuje zadatu temu. Većih grešaka i propusta nema, osim malo bezličnog sažetka, sve ostalo što sam primetila su zanemarujuće stilske greške ili mala neslaganja pri zaključku.
+
+\item Da li je naslov rada dobro izabran?\\
+Da, mada bih se ja pre odlučila za drugačiju karakterizaciju kao na primer: \textbf{najpopularniji} ili \textbf{najkorišćeniji} razvojni alati.
+
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak nije pružio dobar uvid u rad. Prva rečenica je veoma zbunjujuća i nejasna, a to je prva stvar koja se pročita u radu i onda ne ostavlja dobar utisak iako je rad generalno dobro napisan. \\
+Neodređen je i ne daje nikakve informacije koje bi zainteresovale čitaoca.
+
+\item Da li je rad lak-težak za čitanje?\\
+Rad je lak za čitanje. Pisano je razumljivim jezikom, dobra mu je struktura, napisan je tako da zainteresuje čitaoca.\\
+Sitna sugestija: potrebno je malo više boldovati bitne stvari radi naglašavanja i lakšeg čitanja i paziti na konzistentnost korišćenja italic fonta.
+
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Potrebno je veoma malo predznanja za ovu temu. Bilo ko, ko se ikad bavio programiranjem, susreo se sa alatima u dovoljnoj meri da razume ovaj rad, zahvaljući temeljnoj obradi teme.
+
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Literatura je uglavnom odgovarajuća.\\
+Problem postoji eventualno samo sa radom: [3] H. Hajjdiab I. Zayour. How Much Integrated Development Environments (IDEs) Improve Productivity? Journal of Software, 2013.\\
+Ovaj časopis (Journal of Software - JSW) se nalazi na Beall's listi potencijalno predatorskih časopisa i autora, što se može proveriti na sledećem linku: \url{https://beallslist.net/standalone-journals/}.\\
+Sitna zamerka: sortirati literaturu leksikografski po imenima.
+
+\item Da li su u radu reference korektno navedene?\\
+Da, reference su korektno navedene sa imenima autora, časopisa, izdanja ili pak linkovima.\\
+Obratiti samo pažnju na način referenciranja u \textbf{5.1 Najkorišćeniji razvojni alati}.
+
+
+\item Da li je struktura rada adekvatna?\\
+Da.\\
+Sitna zamerka: u sadržaju ima previše ponavljanja reči analiza u podnaslovima, suvišno je i lepše bi bilo samo bez, jasno je da je ceo taj odeljak posvećen analizi.
+
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Da. \\
+Rad je poštovao propise od prve strane: adekvatno naveden naslov, autori, sažetak i sadržaj i svi se nalaze na istoj strani bez prelamanja.
+Rad sadrži 12 strana, što je dozvoljeno, veliki broj slika i tabela koje su poprilično dobro urađene i deskriptivne. Literatura je uredno navedena. 
+
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Sve slike i tabele su funckionalne, razumljive, adekvatno anotirane.\\
+Objašnjen je način dolaženja do tih podataka, formule koje su korišćene, a i sam značaj vizuelnog prikazivanja tih podataka.
+
+\end{enumerate}
+
+\section{Ocenite sebe}
+
+Smatram da sam veoma upućena u ovu oblast. Kroz svoje školovanje sam već koristila dosta od ovih alata, a zatim sam nastavila da koristim još više njih i na poslu. Svakako bih rekla da imam dovoljnu širinu da razumem potpuno ovaj rad, jer i u svoje slobodno vreme istražujem razvojne alate i imam svoje preferncije i mišljenja o njima. 
+
+\chapter{Recenzent \odgovor{--- ocena:} }
+\section{O čemu rad govori?}
+
+Rad se bavi analizom najčešće korišćenih razvojnih alata među IT studentima i programerima sa iskustvom
+sa fokusom na integrisana razvojna okruženja, editore koda i sisteme za
+verzionisanje. Cilj rada je ispitivanje faktora koji utiču na izbor alata,
+nivoa zadovoljstva korisnika i razloga za zadržavanje postojećih ili prelazak
+na nove alate, na osnovu rezultata sprovedene ankete.
+
+\section{Krupne primedbe i sugestije}
+
+Prilikom pregleda rada, nisau uočeni značajniji nedostaci ili propusti u sadržaju, strukturi i metodologiji. Rad je jasno koncipiran, logično strukturisan i akademski utemeljen. Smatram da ne postoje krupne primedbe koje bi zahtevale dodatne izmene ili dopune.
+\section{Sitne primedbe}
+
+Uvedeni pokazatelj reprezentativnosti alata ( $P_A$
+) je formalno korektno definisan,
+ali bi njegovo značenje i interpretacija mogli biti dodatno objašnjeni jednostavnijim
+jezikom, posebno za čitaoce bez jačeg statističkog predznanja.
+
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+\odgovor{Da. Tema je obrađena u skladu sa zadatim ciljevima i istraživačkim pitanjima.}
+
+\item Da li je nešto važno propušteno?\\
+\odgovor{Ne. Dovoljno je obrađena tema kojom se rad bavi.}
+
+\item Da li ima suštinskih grešaka i propusta?\\
+\odgovor{Ne. Rad je sadržajno i metodološki korektan.}
+
+\item Da li je naslov rada dobro izabran?\\
+\odgovor{Da. Naslov je jasan, precizan i u skladu sa sadržajem rada.}
+
+\item Da li sažetak sadrži prave podatke o radu?\\
+\odgovor{Da. Sažetak jasno opisuje cilj, metodologiju i glavne nalaze.}
+
+\item Da li je rad lak-težak za čitanje?\\
+\odgovor{Rad je lak za čitanje i razumljiv ciljnoj grupi.}
+
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+\odgovor{Potrebno je osnovno predznanje iz oblasti informacionih tehnologija.}
+
+\item Da li je u radu navedena odgovarajuća literatura?\\
+\odgovor{Da. Literatura je relevantna i raznovrsna.}
+
+\item Da li su u radu reference korektno navedene?\\
+\odgovor{Da. Reference su pravilno i dosledno citirane.}
+
+\item Da li je struktura rada adekvatna?\\
+\odgovor{Da. Rad prati preporučenu strukturu seminarskog rada.}
+
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+\odgovor{Da. Rad ispunjava sve formalne zahteve.}
+
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+\odgovor{Da. Slike i tabele su pregledne i doprinose razumevanju rezultata.}
+\end{enumerate}
+
+\section{Ocenite sebe}
+
+Smatram da sam recenziju izvršio objektivno, pažljivo i u skladu sa zadatim kriterijumima, uz nastojanje da primedbe budu konstruktivne i korisne autorima rada.
+
+
+\chapter{Dodatne izmene}
+%Ovde navedite ukoliko ima izmena koje ste uradili a koje vam recenzenti nisu tražili. 
+
+\end{document}
