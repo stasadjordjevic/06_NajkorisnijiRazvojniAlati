@@ -124,15 +124,8 @@ Struktura uzorka analizirana je kroz demografske i profesionalne
 karakteristike ispitanika, pri čemu su prikupljeni podaci o dužini 
 iskustva u programiranju, pohađanim fakultetima, 
 kao i polu. Među ispitanicima, 27 je bilo muškog, a 16 ženskog pola. Ubedljivo najviše ispitanika je sa Matematičkog fakulteta 79,1\%, dok je zastupljenost ostalih fakulteta mala.
-Na slici \ref{fig:iskustvo} je prikazana raspodela ispitanika po dužini iskustva u programiranju (uključujući školu, fakultet, lične projekte ili posao).
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{"Slike/duzina iskustva.png"}
-    \caption{Raspodela ispitanika po dužini iskustva u programiranju.}
-    \label{fig:iskustvo}
-\end{figure}
-
+Kada je u pitanju dužina iskustva u programiranju (uključujući školu, fakultet, lične projekte i profesionalni rad), najveći deo uzorka čine ispitanici sa srednjim nivoom iskustva: čak 51,2\% ispitanika ima između 3 i 5 godina iskustva, dok 32,6\% ima između 6 i 9 godina iskustva. Manji, ali značajan deo uzorka čine iskusniji programeri sa 10 do 15 godina iskustva (14\%). Ostale kategorije (manje od jedne godine i više od 15 godina iskustva) nisu statistički značajne u uzorku.
 
 \subsection {Struktura ankete}
 \label{subsec:strukturaAnkete}
@@ -317,19 +310,22 @@ Analiza otvorenih odgovora pokazuje da se izbor razvojnog alata zasniva na balan
 
 U ovom radu su analizirani obrasci korišćenja razvojnih alata među studentima tehničkih fakulteta i profesionalcima u IT sektoru, sa posebnim fokusom na kriterijume izbora i spremnost na promenu alata. Dobijeni rezultati se u velikoj meri poklapaju sa literaturom, ali ukazuju i na određene specifičnosti konteksta.
 
-\subsection{Najkorišćeniji razvojni alati}
+%TODO preimenovati? bilo je Najkorišćeniji razvojni alati
+\subsection{Poređenje dobijenih rezultata sa literaturom}
 \label{subsec:alatiD}
 Analizirani su najkorišćeniji razvojni alati među ispitanicima, a dobijeni rezultati su upoređeni sa relevantnom literaturom kako bi se sagledala njihova usklađenost sa opštim industrijskim trendovima. 
 
 \begin{itemize}
-\item\textbf{IDE alati:} Među našim ispitanicima je najkorišćeniji alat \textit{Visual Studio/Visual Studio Code}, što je u skladu sa literaturom u kojoj se ovaj alat nalazi na prvom mestu liste najkorišćenijih razvojnih okruženja \cite{top27} .
-Pored toga, razvojna okruženja iz \textit{JetBrains} porodice imaju izraženu zastupljenost u našem uzorku, gde \textit{IntelliJ IDEA} koristi 46,5\% ispitanika, \textit{PyCharm} 11,6\%, a \textit{CLion} 14\%. Ovakva zastupljenost je takođe u saglasnosti sa literaturom, prema kojoj se \textit{JetBrains IDEs} nalaze na četvrtoj poziciji najkorišćenijih razvojnih alata \cite{top27}.
+%TODO vs-vsc bode oci
+\item\textbf{IDE alati:} Među našim ispitanicima je najkorišćeniji alat \textit{Visual Studio/Visual Studio Code}, što je u skladu sa literaturom u kojoj se ovaj alat nalazi na \textbf{prvom mestu} liste najkorišćenijih razvojnih okruženja \cite{top27} .
+Pored toga, razvojna okruženja iz \textit{JetBrains} porodice imaju izraženu zastupljenost u našem uzorku, gde \textit{IntelliJ IDEA} koristi 46,5\% ispitanika, \textit{PyCharm} 11,6\%, a \textit{CLion} 14\%. Ovakva zastupljenost je takođe u saglasnosti sa literaturom, prema kojoj se \textit{JetBrains IDEs} nalaze na \textbf{četvrtoj poziciji} najkorišćenijih razvojnih alata \cite{top27}.
 
 
-\item \textbf{Tekstualni editori:} Najzastupljeniji tekstualni editori kod naših ispitanika su \textit{Notepad++} (32,6\%), \textit{Vim} (27,9\%) i \textit{Kate} (25,6\%), dok \textit{Sublime Text} koristi svega 9,3\% ispitanika. Ovo predstavlja značajno odstupanje u odnosu na literaturu, u kojoj se \textit{Sublime Text} nalazi čak na drugom mestu liste najkorišćenijih razvojnih alata. \cite{top27} Uočena razlika može se objasniti uticajem akademskog okruženja i ličnih navika korisnika, kao i relativno malim obimom uzorka.
+%TODO da li da kazem drugi na listu najkoriscenijih razvojnih alata, gde je prvi od tekstualnih editora?
+\item \textbf{Tekstualni editori:} Najzastupljeniji tekstualni editori kod naših ispitanika su \textit{Notepad++} (32,6\%), \textit{Vim} (27,9\%) i \textit{Kate} (25,6\%), dok \textit{Sublime Text} koristi svega 9,3\% ispitanika. Ovo predstavlja značajno odstupanje u odnosu na literaturu, u kojoj se \textit{Sublime Text} nalazi čak na \textbf{drugom mestu} liste najkorišćenijih razvojnih alata. \cite{top27} Uočena razlika može se objasniti uticajem akademskog okruženja i ličnih navika korisnika, kao i relativno malim obimom uzorka.
 
 \item \textbf{Sistemi za verzionisanje koda:} Kada je u pitanju verzionisanje koda, \textit{Git} se izdvaja kao ubedljivo najpopularniji sistem, kako prema literaturi, tako i u našem istraživanju, gde ga koristi čak 100\% ispitanika \cite{git}. Ovakav rezultat potvrđuje status Git-a kao industrijskog standarda u savremenom razvoju softvera, nezavisno od korišćenog razvojnog okruženja ili nivoa iskustva programera.
-U našoj anketi se jasno vidi znatna dominacija GitHub-a nad GitLab-om kao platformama za upravljanje verzijama koda — GitHub koristi 88,4\% ispitanika, dok GitLab koristi 11,6\%. Ovaj rezultat ukazuje na snažnu preferencu prema GitHub-u i u našem uzorku, što se poklapa sa opštim trendom u IT industriji, gde GitHub generalno ima znatno veći udeo u korišćenju u odnosu na druge Git platforme \cite{github.gitlab}.
+U našoj anketi se jasno vidi znatna \textbf{dominacija GitHub-a nad GitLab-om} kao platformama za upravljanje verzijama koda — GitHub koristi 88,4\% ispitanika, dok GitLab koristi 11,6\%. Ovaj rezultat ukazuje na snažnu preferencu prema GitHub-u i u našem uzorku, što se poklapa sa opštim trendom u IT industriji, gde GitHub generalno ima znatno veći udeo u korišćenju u odnosu na druge Git platforme \cite{github.gitlab}.
 
 \end{itemize}
 
@@ -337,30 +333,30 @@ U našoj anketi se jasno vidi znatna dominacija GitHub-a nad GitLab-om kao platf
 \subsection{Faktori koji utiču na izbor alata}
 \label{subsec:faktori}
 
-Rezultati istraživanja pokazuju da su \textit{brzina i odziv} razvojnog alata dominantni kriterijum izbora, nezavisno od pola, radnog statusa ili nivoa iskustva ispitanika. Ovo potvrđuje da programeri primarno vrednuju efikasnost i stabilnost, budući da alati predstavljaju centralni deo njihovog svakodnevnog rada.
-
-\setlength{\parskip}{0.5em}
+Rezultati istraživanja pokazuju da su \textbf{brzina i odziv razvojnog alata dominantni kriterijum izbora}, nezavisno od pola, radnog statusa ili nivoa iskustva ispitanika. Ovo potvrđuje da programeri primarno vrednuju efikasnost i stabilnost, budući da alati predstavljaju centralni deo njihovog svakodnevnog rada.
 
 Analiza spremnosti na promenu alata ukazuje da ispitanici sa većim radnim iskustvom češće menjaju svoje primarno razvojno okruženje, što sugeriše veću fleksibilnost i manju vezanost za konkretne tehnologije. Nasuprot tome, manje iskusni programeri češće ostaju pri jednom alatu, verovatno usled formiranja početnih navika i potrebe za stabilnim okruženjem tokom učenja.
 
 Razlike su uočene i u odnosu prema savremenim tehnologijama: zaposleni programeri pokazuju veću otvorenost ka praćenju \textit{AI trendova} i korišćenju AI alata, dok studenti ove faktore ređe percipiraju kao važne pri izboru razvojnog okruženja.
 
-Poseban značaj ima i uticaj dugogodišnjih navika na izbor razvojnog alata. Većina ispitanika je ocenila ovaj faktor veoma visoko — čak 62,8\% ispitanika dalo je ocenu 4, a dodatnih 23,3\% ocenu 5, dok zanemarljiv broj smatra da navike imaju mali ili nikakav uticaj. Ovakav rezultat ukazuje da se programeri često zadržavaju na alatima koje dobro poznaju, čak i kada postoje alternative sa sličnim ili naprednijim funkcionalnostima.
+Poseban značaj ima i \textbf{uticaj dugogodišnjih navika na izbor razvojnog alata}. Većina ispitanika je ocenila ovaj faktor veoma visoko — čak 62,8\% ispitanika dalo je ocenu 4, a dodatnih 23,3\% ocenu 5, dok zanemarljiv broj smatra da navike imaju mali ili nikakav uticaj. Ovakav rezultat ukazuje da se programeri često zadržavaju na alatima koje dobro poznaju, čak i kada postoje alternative sa sličnim ili naprednijim funkcionalnostima.
 
 U celini, izbor razvojnog alata predstavlja rezultat kombinacije tehničkih zahteva, profesionalnog konteksta i stečenih navika, a ne isključivo procene pojedinačnih karakteristika alata.
 
 \subsection{Ograničenja istraživanja}
 \label{subsec:ogranicenja}
 
-Iako dobijeni rezultati pružaju uvid u aktuelne trendove korišćenja razvojnih alata i preference korisnika, istraživanje ima nekoliko ograničenja koja treba uzeti u obzir pri tumačenju rezultata.  
+Iako dobijeni rezultati pružaju uvid u aktuelne trendove korišćenja razvojnih alata i preference korisnika, istraživanje ima nekoliko ograničenja:
 
-Prvo, uzorak od 43 ispitanika nije dovoljno obiman da bi se izvukli generalni zaključci za širu populaciju programera. Za značajnije statističke procene i pouzdano određivanje trendova, bio bi potreban znatno veći i raznovrsniji uzorak.  
-
-Drugo, sastav uzorka je specifičan — većina ispitanika su studenti Matematičkog fakulteta, što može povući pristrasnost prema određenim alatima, budući da se na fakultetu koriste uglavnom određeni razvojni alati i okruženja.  
-
-Treće, rezultati su zasnovani na samoproceni ispitanika, što može biti pod uticajem subjektivnih stavova, navika ili trenutnog iskustva. Navike korišćenja alata, prethodno iskustvo i lične preferencije mogu značajno uticati na odgovore, što ograničava mogućnost da se dobijeni podaci tretiraju kao apsolutno reprezentativni.  
-
-Konačno, anketa nije obuhvatila sve moguće faktore koji utiču na izbor alata, kao što su specifični zahtevi projekata, industrijski standardi u kompanijama ispitanika ili regionalne razlike, što znači da određene varijable koje mogu biti značajne nisu uzete u obzir.  
+\begin{itemize}
+    \item \textbf{Veličina uzorka:} Uzorak od 43 ispitanika nije dovoljno obiman da bi se izvukli generalni zaključci za širu populaciju programera.
+    
+    \item \textbf{Struktura uzorka:} Većina ispitanika su studenti Matematičkog fakulteta, što može dovesti do pristrasnosti prema određenim alatima.
+    
+    \item \textbf{Samoprocena ispitanika:} Podaci su zasnovani na subjektivnim procenama, koje mogu biti pod uticajem ličnih navika i trenutnog iskustva.
+    
+    \item \textbf{Ograničen skup faktora:} Nisu obuhvaćeni faktori poput specifičnih zahteva projekata, industrijskih standarda kompanija ili regionalnih razlika.
+\end{itemize}
 
 Uzimajući sve ovo u obzir, rezultati treba interpretirati sa oprezom i kao okvirne smernice, a ne kao definitivan prikaz navika i preferencija svih programera.
 
@@ -368,11 +364,11 @@ Uzimajući sve ovo u obzir, rezultati treba interpretirati sa oprezom i kao okvi
 \label{sec:zakljucak}
 
 
-Na osnovu sprovedene ankete i analize dobijenih rezultata, može se zaključiti da su \textit{Visual Studio} i \textit{Visual Studio Code} dominantni alati u praksi, što je u skladu sa savremenim industrijskim trendovima i relevantnom literaturom.
+Na osnovu sprovedene ankete i analize dobijenih rezultata, može se zaključiti da su \textbf{\textit{Visual Studio} i \textit{Visual Studio Code}} dominantni alati u praksi, što je u skladu sa savremenim industrijskim trendovima i relevantnom literaturom.
 
-Istraživanje je pokazalo da su performanse alata, odnosno brzina i odziv, ključni kriterijumi pri izboru razvojnog okruženja, dok faktori poput vizuelnog izgleda i praćenja AI trendova imaju manji, ali ne zanemarljiv značaj. Uočene razlike između studenata i zaposlenih ukazuju na promenu prioriteta tokom profesionalnog razvoja.
+Istraživanje je pokazalo da su \textbf{performanse alata, odnosno brzina i odziv, ključni kriterijumi} pri izboru razvojnog okruženja, dok faktori poput vizuelnog izgleda i praćenja AI trendova imaju manji, ali ne zanemarljiv značaj. Uočene razlike između studenata i zaposlenih ukazuju na promenu prioriteta tokom profesionalnog razvoja.
 
-Rezultati takođe potvrđuju dominaciju sistema \textit{Git} kao standarda za verzionisanje koda, kao i znatno veću popularnost platforme \textit{GitHub} u odnosu na \textit{GitLab}. Ovakvi nalazi dodatno naglašavaju homogenost savremenih razvojnih praksi i oslanjanje na globalno prihvaćene alate i platforme.
+Rezultati takođe potvrđuju \textbf{dominaciju sistema \textit{Git}} kao standarda za verzionisanje koda, kao i znatno veću popularnost platforme \textit{GitHub} u odnosu na \textit{GitLab}. Ovakvi nalazi dodatno naglašavaju homogenost savremenih razvojnih praksi i oslanjanje na globalno prihvaćene alate i platforme.
 
 Iako istraživanje ima određena ograničenja, pre svega u pogledu veličine i strukture uzorka, dobijeni podaci pružaju relevantan uvid u aktuelne navike i preferencije programera. Ovaj rad može poslužiti kao osnova za buduća, obimnija istraživanja koja bi uključila veći broj ispitanika, širi spektar tehnologija i dublju analizu uticaja novih trendova, poput veštačke inteligencije, na izbor razvojnih alata.
 
