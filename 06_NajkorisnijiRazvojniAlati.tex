@@ -72,8 +72,7 @@ Značaj ovog istraživanja ogleda se u pružanju sistematičnog uvida u način n
 \section{O razvojnim alatima}
 \label{sec:oRazvojnimAlatima}
 
-Razvoj softvera se oslanja na upotrebu različitih alata koji programerima omogućavaju efikasnije pisanje, organizaciju, testiranje i održavanje programskog koda. Razvojni alati imaju značajan uticaj na produktivnost i način rada programera, pri čemu empirijske studije ukazuju da, iako savremena integrisana razvojna okruženja unapređuju pojedine aspekte rada, njihova rastuća kompleksnost može dovesti do povećanih troškova učenja i debagovanja \cite{ZayourHajjdiab}.
-U ovom radu razmatraju se tri osnovne kategorije razvojnih alata: integrisana razvojna okruženja (IDE), tekstualni editori koda i sistemi za verzionisanje.
+Razvoj softvera se oslanja na upotrebu različitih alata koji programerima omogućavaju efikasnije pisanje, organizaciju, testiranje i održavanje programskog koda. U ovom radu razmatraju se tri osnovne kategorije razvojnih alata: integrisana razvojna okruženja (IDE), tekstualni editori koda i sistemi za verzionisanje.
 
 \subsection{Integrisana razvojna okruženja (IDE)}
 \label{subsec:ide}
@@ -94,7 +93,8 @@ Jedna od ključnih prednosti tekstualnih editora jeste njihova brzina rada i mal
 \subsection{Sistemi za verzionisanje}
 \label{subsec:verzionisanje}
 
-\textbf{Sistem za verzionisanje} je sistem koji je zadužen za čuvanje i kontrolisanje izmena programskog koda, odnosno za upravljanje različitim verzijama softvera koji se razvija \cite{Sink2011}. Njihova osnovna uloga jeste čuvanje istorije izmena, omogućavanje povratka na prethodne verzije koda i olakšavanje saradnje više korisnika na istom projektu. 
+\textbf{Sistem za verzionisanje} je sistem koji je zadužen za čuvanje i kontrolisanje izmena programskog koda, odnosno za upravljanje različitim verzijama softvera koji se razvija \cite{Sink2011}. Njihova osnovna uloga jeste čuvanje istorije izmena i
+omogućavanje povratka na prethodne verzije koda, čime se olakšava saradnja više korisnika na istom projektu.
 
 Dele se na centralizovane, koji se oslanjaju na centralni repozitorijum sa kompletnom istorijom izmena, i distribuirane, kod kojih svaki korisnik poseduje lokalnu kopiju repozitorijuma. Najpoznatiji primer distribuiranog sistema za verzionisanje je \textbf{Git}.
 
@@ -242,7 +242,7 @@ U okviru istraživanja, jedan od ciljeva bio je i utvrđivanje popularnosti vode
 
 Odnos od skoro 9:1 u korist GitHub-a ukazuje na to da korisnici u velikoj većini biraju platforme koje omogućavaju najlakšu kolaboraciju i najveću bazu zajednice.
 
-\subsection{Uticaj radnog iskustva na promenu razvojnog alata}
+\subsection{Uticaj radnog iskustva na zamenu razvojnog alata}
 \label{subsec:analiza3}
 
 U ovom delu istraživanja analizira se korelacija između dužine radnog staža ispitanika i njihove tendencije ka prelasku sa jednog na drugi primarni razvojni alat. Rezultati prikazani na slici \ref{fig:iskustvo_promena} pružaju uvid u to koliko su programeri u različitim fazama karijere skloni usvajanju novih tehnologija.
@@ -250,7 +250,7 @@ U ovom delu istraživanja analizira se korelacija između dužine radnog staža 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{Slike/odnos_promene_alata_i_radnog_iskustva.png}
-    \caption{Uticaj radnog iskustva na promenu razvojnog alata}
+    \caption{Uticaj radnog iskustva na zamenu razvojnog alata}
     \label{fig:iskustvo_promena}
 \end{figure}
 
@@ -325,7 +325,7 @@ Pored toga, razvojna okruženja iz \textit{JetBrains} porodice imaju izraženu z
 \item \textbf{Tekstualni editori:} Najzastupljeniji tekstualni editori kod naših ispitanika su \textit{Notepad++} (32,6\%), \textit{Vim} (27,9\%) i \textit{Kate} (25,6\%), dok \textit{Sublime Text} koristi svega 9,3\% ispitanika. Ovo predstavlja značajno odstupanje u odnosu na literaturu, u kojoj se \textit{Sublime Text} nalazi čak na \textbf{drugom mestu} liste najkorišćenijih razvojnih alata. \cite{top27} Uočena razlika može se objasniti uticajem akademskog okruženja i ličnih navika korisnika, kao i relativno malim obimom uzorka.
 
 \item \textbf{Sistemi za verzionisanje koda:} Kada je u pitanju verzionisanje koda, \textit{Git} se izdvaja kao ubedljivo najpopularniji sistem, kako prema literaturi, tako i u našem istraživanju, gde ga koristi čak 100\% ispitanika \cite{git}. Ovakav rezultat potvrđuje status Git-a kao industrijskog standarda u savremenom razvoju softvera, nezavisno od korišćenog razvojnog okruženja ili nivoa iskustva programera.
-U našoj anketi se jasno vidi znatna \textbf{dominacija GitHub-a nad GitLab-om} kao platformama za upravljanje verzijama koda — GitHub koristi 88,4\% ispitanika, dok GitLab koristi 11,6\%. Ovaj rezultat ukazuje na snažnu preferencu prema GitHub-u i u našem uzorku, što se poklapa sa opštim trendom u IT industriji, gde GitHub generalno ima znatno veći udeo u korišćenju u odnosu na druge Git platforme \cite{github.gitlab}.
+U našoj anketi se jasno vidi znatna \textbf{dominacija GitHub-a nad GitLab-om} kao platformama za upravljanje verzijama koda — GitHub koristi 88,4\% ispitanika, dok GitLab koristi 11,6\%. Ovaj rezultat ukazuje na snažnu preferencu prema GitHub-u i u našem uzorku, što se poklapa sa opštim trendom u IT industriji, gde GitHub generalno ima znatno veći udeo u korišćenju u odnosu na druge Git platforme \cite{github.gitlab, Uddin2023GitPlatforms}.
 
 \end{itemize}
 
