@@ -295,30 +295,13 @@ Staša Đorđević, Lazar Savić, Đurđa Milošević, Bogdan Tomić
 \vspace*{0.5cm}
 \end{frame}
 
-\begin{frame}{Literatura}
-\tiny
-\setlength{\itemsep}{0pt}
-\setlength{\parskip}{0pt}
-
+\section{Literatura}
+\begin{frame}[allowframebreaks]{Literatura}
+\footnotesize
 \nocite{*}
 \bibliographystyle{apalike}
 \bibliography{seminarski}
+
 \end{frame}
-
-
-\begin{frame}
-\begin{tikzpicture}[remember picture,overlay]
-  \def\bandh{3.2cm}
-
-  % traka pune sirine: od leve do desne ivice
-  \fill[matfDarkRed]
-    ([yshift=0.5*\bandh]current page.center -| current page.west) rectangle
-    ([yshift=-0.5*\bandh]current page.center -| current page.east);
-
-  % tekst tacno u centru
-  \node[font=\bfseries\LARGE, text=white] at (current page.center) {Hvala na pažnji!};
-\end{tikzpicture}
-\end{frame}
-
 
 \end{document}
