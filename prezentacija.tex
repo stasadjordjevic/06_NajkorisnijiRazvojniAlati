@@ -1,0 +1,324 @@
+\documentclass[xcolor=svgnames,t]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbian]{babel}
+
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+\usepackage{booktabs,comment}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[font=footnotesize]{caption}
+
+\usetheme{Madrid}
+\useoutertheme{infolines}
+\setbeamertemplate{page number in head/foot}{}
+\setbeamersize{text margin left=1cm, text margin right=1cm}
+
+\definecolor{matfDarkRed}{RGB}{128, 0, 32}   
+\definecolor{matfRed}{RGB}{178, 34, 34}      
+\definecolor{matfBlack}{RGB}{0, 0, 0}       
+
+\usecolortheme[named=matfDarkRed]{structure}
+
+\setbeamercolor{normal text}{fg=matfBlack,bg=white}
+
+\setbeamercolor{frametitle}{fg=white,bg=matfDarkRed}
+
+\setbeamercolor{title in head/foot}{bg=matfRed,fg=white}
+\setbeamercolor{author in head/foot}{bg=matfBlack,fg=white}
+\setbeamercolor{date in head/foot}{bg=matfBlack,fg=white}
+
+\setbeamercolor{block title}{bg=matfDarkRed,fg=white}
+\setbeamercolor{block body}{bg=white,fg=matfBlack}
+
+\addtobeamertemplate{navigation symbols}{}{%
+  \usebeamerfont{footline}%
+  \usebeamercolor[fg]{footline}%
+  \hspace{1em}%
+  \insertframenumber/\inserttotalframenumber
+}
+
+\newcommand{\matflogo}{Slike/grb-matf.png}
+
+\title[Najkorišćeniji razvojni alati]{Najkorišćeniji razvojni alati}
+\subtitle{Seminarski rad u okviru kursa Metodologija stručnog i naučnog rada}
+\author[Matematički fakultet]{
+Staša Đorđević, Lazar Savić, Đurđa Milošević, Bogdan Tomić
+}
+\institute[]{Matematički fakultet \\ Univerzitet u Beogradu}
+\date{\today}
+
+\titlegraphic{\includegraphics[height=2.0cm]{\matflogo}}
+
+\begin{document}
+{
+\begin{frame}
+  \maketitle
+\end{frame}
+}
+\begin{frame}
+  \frametitle{Sadržaj}
+  \tableofcontents
+\end{frame}
+
+\section{Uvod}
+\begin{frame}{Uvod}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item Razvojni alati imaju ključnu ulogu u produktivnosti i efikasnosti programera
+  \item Neadekvatan izbor alata može usporiti rad i otežati razvoj softvera
+  \item Veliki broj alata → izbor često zavisi od iskustva i navike
+  \item Dosadašnja istraživanja izdvajaju VS Code, Sublime Text i Git kao najkorišćenije alate
+  \item Cilj istraživanja je da se identifikuju najčešće korišćeni alati i faktori koji utiču na njihov izbor
+\end{itemize}
+\vspace*{0.5cm}
+\end{frame}
+
+\section{O razvojnim alatima}
+\begin{frame}{O razvojnim alatima}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item U istraživanju su razmatrane tri osnovne kategorije razvojnih alata:
+  \begin{itemize}
+    \item \textbf{Integrisana razvojna okruženja (IDE)} - objedinjuju pisanje, testiranje i debagovanje koda
+    \item \textbf{Tekstualni editori koda} - namenjeni pisanju i uređivanju izvornog koda, sa fokusom na jednostavnost i fleksibilnost
+    \item \textbf{Sistemi za verzionisanje} - zaduženi za čuvanje i kontrolisanje izmena programskog koda
+  \end{itemize}
+\end{itemize}
+
+\vspace{0.8cm}
+\begin{columns}[c,onlytextwidth]
+  \column{0.33\textwidth}
+    \centering
+    \includegraphics[height=1.5cm]{Slike/vsc.png}
+
+  \column{0.33\textwidth}
+    \centering
+    \includegraphics[height=1.5cm]{Slike/sublime-text.png}
+
+  \column{0.33\textwidth}
+    \centering
+    \includegraphics[height=1.1cm]{Slike/git.png}
+\end{columns}
+
+\vspace*{0.5cm}
+\end{frame}
+
+\section{Metodologija}
+\begin{frame}{Metodologija}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item Anonimna onlajn anketa
+  \item Dominantno kvantitativni istraživački pristup
+  \item \textbf{Struktura uzorka}
+  \begin{itemize}
+    \setlength{\itemsep}{0.15em}
+    \item Obim: \textbf{43 ispitanika}
+    \item Studenti tehničkih fakulteta i iskusniji programeri
+    \item 27 muškog pola i 16 ženskog
+    \item Većinski sa Matematičkog fakulteta (79,1\%)
+    \item Najčešće 3–5 godina iskustva (51,2\%)
+  \end{itemize}
+  \item \textbf{Struktura ankete}
+  \begin{itemize}
+    \item 15 pitanja: 12 zatvorenog i 3 otvorenog tipa
+  	\item Demografska i profesionalna pitanja (pol, iskustvo, fakultet)
+  	\item Pitanja o korišćenim razvojnim alatima i faktorima izbora
+  \end{itemize}
+\end{itemize}
+
+\vspace*{0.5cm}
+\end{frame}
+
+\begin{frame}{Metodologija}
+
+\vfill
+
+\begin{columns}[c,onlytextwidth]
+  \column{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.85\linewidth]{Slike/fakulteti.png}
+
+  \column{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.85\linewidth]{Slike/duzina iskustva.png}
+\end{columns}
+
+\vfill
+
+\vspace*{0.5cm}
+\end{frame}
+
+\section{Rezultati}
+
+\begin{frame}{Rezultati}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item U okviru istraživanja razmatrani su sledeći aspekti:
+  \begin{itemize}
+    \item najkorišćeniji razvojni alati među ispitanicima
+    \item faktori koji utiču na izbor alata
+    \item sklonost ka promeni alata
+    \item analiza otvorenih odgovora ispitanika
+  \end{itemize}
+  \item Dobijeni rezultati su upoređeni sa nalazima iz relevantne literature
+  \item Istraživanje pruža uvid u navike i preferencije korisnika razvojnih alata
+\end{itemize}
+
+\vspace*{0.5cm}
+\end{frame}
+
+
+\subsection{Najkorišćeniji razvojni alati}
+\begin{frame}{Najkorišćeniji razvojni alati}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item IDE: \textbf{Visual Studio / Visual Studio Code}
+  \begin{itemize}
+    \item dominantni među ispitanicima
+    \item u skladu sa dosadašnjim istraživanjima
+  \end{itemize}
+
+  \item Tekstualni editori: \textbf{Notepad++}
+  \begin{itemize}
+    \item odstupanje sa literaturom koja izdvaja \textbf{Sublime Text} (u uzorku zastupljen samo 9,3\%)
+  \end{itemize}
+
+  \item Sistemi za verzionisanje: \textbf{Git}
+  \begin{itemize}
+    \item platformu \textbf{GitHub} koristi 88,4\% ispitanika
+    \item u skladu sa opštim trendovima
+  \end{itemize}
+\end{itemize}
+
+\vspace*{0.5cm}
+\end{frame}
+\subsection{Faktori izbora alata}
+\begin{frame}{Faktori izbora alata}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item \textbf{Brzina} i \textbf{odziv okruženja} imaju najvišu prosečnu ocenu (4.74)
+  \item Rezultati ukazuju da ispitanici preferiraju alate koji omogućavaju brži i efikasniji svakodnevni rad (ušteda vremena)
+  \item \textbf{Dugogodišnje navike} imaju snažan uticaj na izbor razvojnog alata
+\end{itemize}
+
+\vspace{0.2cm}
+
+\begin{center}
+  \includegraphics[width=0.8\textwidth]{Slike/top_5_konkretnih_alataa.png}
+\end{center}
+
+\vspace*{0.5cm}
+\end{frame}
+
+\begin{frame}{Faktori izbora alata: studenti vs zaposleni}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item Uočene su razlike u prioritetima između studenata i zaposlenih programera
+  \item Studenti više vrednuju jednostavnost korišćenja
+  \item Zaposleni više vrednuju UX dizajn i praćenje AI trendova
+\end{itemize}
+
+\vspace{0.4cm}
+
+\begin{center}
+  \includegraphics[width=0.7\textwidth]{Slike/oredjenje_prioriteta_studenti_zaposleni.png}
+\end{center}
+
+\vspace*{0.5cm}
+\end{frame}
+
+\subsection{Sklonost ka promeni alata}
+\begin{frame}{Sklonost ka promeni alata}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item Veće radno iskustvo (posebno \textbf{6+ godina}) povećava sklonost ka promeni razvojnog alata
+  \item Visok značaj navike  $\neq$  otpor prema promeni
+  \item Promena alata se javlja kada novi alat donosi jasne funkcionalne prednosti
+\end{itemize}
+
+\vspace{0.1cm}
+
+\begin{center}
+  \includegraphics[width=0.7\textwidth]{Slike/odnos_promene_alata_i_radnog_iskustva.jpeg}
+\end{center}
+\vspace*{0.5cm}
+\end{frame}
+\subsection{Analiza otvorenih odgovora}
+\begin{frame}{Analiza otvorenih odgovora}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item Otvoreni odgovori dopunjuju kvantitativne rezultate istraživanja
+  \item \textbf{Razlozi izbora alata:}
+  \begin{itemize}
+    \item balans jednostavnosti i funkcionalnosti (VS Code)
+    \item snažna podrška za konkretne jezike i okvire (JetBrains alati)
+    \item zahtevi fakulteta ili radnog okruženja
+  \end{itemize}
+  \item \textbf{Uočeni problemi:}
+  \begin{itemize}
+    \item visoka potrošnja resursa kod kompleksnih IDE
+    \item ograničene napredne funkcije kod lakših editora
+  \end{itemize}
+  \item Izbor alata zasniva se na kompromisu između performansi, funkcionalnosti i navike
+\end{itemize}
+
+\vspace*{0.5cm}
+\end{frame}
+
+\section{Zaključak}
+
+\begin{frame}{Zaključak}
+\vspace{0.5cm}
+
+\begin{itemize}
+  \item Najkorišćeniji IDE: \textbf{Visual Studio / Visual Studio Code}, a tekstualni editor \textbf{Notepad++}
+  \item Ubedljiva dominacija alata \textbf{Git} u sistemima za verzionisanje
+  \item \textbf{Brzina i odziv okruženja} su ključni kriterijumi pri izboru alata
+  \item Navika ima značajan uticaj na izbor alata i kod studenata i kod zaposlenih programera
+  \item Iskusniji programeri češće menjaju razvojne alate od početnika
+\end{itemize}
+
+\vspace*{0.5cm}
+\end{frame}
+
+\begin{frame}{Literatura}
+\tiny
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{seminarski}
+\end{frame}
+
+
+\begin{frame}
+\begin{tikzpicture}[remember picture,overlay]
+  \def\bandh{3.2cm}
+
+  % traka pune sirine: od leve do desne ivice
+  \fill[matfDarkRed]
+    ([yshift=0.5*\bandh]current page.center -| current page.west) rectangle
+    ([yshift=-0.5*\bandh]current page.center -| current page.east);
+
+  % tekst tacno u centru
+  \node[font=\bfseries\LARGE, text=white] at (current page.center) {Hvala na pažnji!};
+\end{tikzpicture}
+\end{frame}
+
+
+\end{document}
